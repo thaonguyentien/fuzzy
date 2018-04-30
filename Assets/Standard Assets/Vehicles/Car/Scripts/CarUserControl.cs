@@ -11,11 +11,14 @@ namespace UnityStandardAssets.Vehicles.Car
 		public GameObject car;
 		public GameObject inters;
 		float dist_pre = 999999f;
+		bool isTurn=false;
+		bool turnDone=false;
         private void Awake()
         {
             // get the car controller
             m_Car = GetComponent<CarController>();
-			inters = GameObject.Find("Inter1");
+			inters[0] = GameObject.Find("Inter1");
+			inters[1] = GameObject.Find("Inter2");
 			car = GameObject.Find("Car");
         }
 
@@ -32,17 +35,22 @@ namespace UnityStandardAssets.Vehicles.Car
 			float dist = Vector3.Distance(carPosition, interPosition);
 
 //			print("Distance to other: " + dist);
-			print (m_Car.CurrentSpeed +" h: " + h + " v: "+ v +"distance: "+ dist + "dist_pre: "+ dist_pre);
+			print (m_Car.CurrentSpeed +" h: " + h + " v: "+ v +"distance: "+ dist + " m_Car.transform.eulerAngles: "+ m_Car.transform.eulerAngles.y);
 //			print (car.transform.position.x);
-			if (dist<23f) {
+			if (dist<=23f && (turnDone == false)) {
 				v = 0;
-				h = 0.5f;
+				h = 0.4f;
+				isTurn = true;
+
 			} 
-			if (dist>(dist_pre)) {
-				print ("stop ");
+			if (dist>(dist_pre) && dist>20f && isTurn) {
+				m_Car.transform.eulerAngles=  (new Vector3 (0, 90, 0));
 				v = 1;
 				h = 0;
+				turnDone = true;
+//				isTurn = false;
 			}
+
 			dist_pre = dist;
             // pass the input to the car!
            
