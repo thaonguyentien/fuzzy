@@ -15,7 +15,7 @@ namespace UnityStandardAssets.Vehicles.Car
 		bool[] turnDones=new bool[20];
 		public GameObject[] inters= new GameObject[20];
 		private Vector3[] interPositions = new Vector3[20]; 
-		int index=0;
+		int index=1;
 		private void Awake()
 		{
 			// get the car controller
@@ -26,6 +26,7 @@ namespace UnityStandardAssets.Vehicles.Car
 			car = GameObject.Find("Car");
 			interPositions[0] = inters[0].transform.position;
 			interPositions[1] = inters[1].transform.position;
+
 		}
 
 
@@ -40,9 +41,9 @@ namespace UnityStandardAssets.Vehicles.Car
 
 
 			float dist = Vector3.Distance(carPosition, interPositions[index]);
-
+			print ("index: "+interPositions[index]);
 			//			print("Distance to other: " + dist);
-			print (m_Car.CurrentSpeed +" h: " + h + " v: "+ v +"distance: "+ dist + " m_Car.transform.eulerAngles: "+ m_Car.transform.eulerAngles.y);
+//			print (m_Car.CurrentSpeed +" h: " + h + " v: "+ v +"distance: "+ dist + " m_Car.transform.eulerAngles: "+ m_Car.transform.eulerAngles.y);
 			//			print (car.transform.position.x);
 			if (dist<=23f && (turnDones[index] == false)) {
 				v = 0;
@@ -54,8 +55,9 @@ namespace UnityStandardAssets.Vehicles.Car
 				m_Car.transform.eulerAngles=  (new Vector3 (0, 90, 0));
 				v = 1;
 				h = 0;
+				print ("turn: " + index);
 				turnDones[index] = true;
-				index++;
+				index--;
 				//				isTurn = false;
 			}
 
