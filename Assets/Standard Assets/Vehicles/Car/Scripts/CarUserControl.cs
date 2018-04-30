@@ -9,23 +9,28 @@ namespace UnityStandardAssets.Vehicles.Car
 	{
 		private CarController m_Car; // the car controller we want to use
 		public GameObject car;
-		public GameObject inter;
+//		public GameObject inter;
 		float dist_pre = 999999f;
 		bool[] isTurns=new bool[20];
 		bool[] turnDones=new bool[20];
 		public GameObject[] inters= new GameObject[20];
 		private Vector3[] interPositions = new Vector3[20]; 
-		int index=1;
+		int index;
+		Vector3 carPosition;
 		private void Awake()
 		{
 			// get the car controller
 			m_Car = GetComponent<CarController>();
 			inters= GameObject.FindGameObjectsWithTag("inter");
+			index=inters.Length-1;
 			//			inters.Add (inter);
 			//			inters[1] = GameObject.Find("Inter2");
 			car = GameObject.Find("Car");
-			interPositions[0] = inters[0].transform.position;
-			interPositions[1] = inters[1].transform.position;
+			for (int i=0;i<inters.Length;++i) {
+				interPositions[i] = inters[i].transform.position;
+//				print(interPositions[i]);
+			}
+
 
 		}
 
@@ -37,11 +42,11 @@ namespace UnityStandardAssets.Vehicles.Car
 			float v = 1;
 			//			float h = CrossPlatformInputManager.GetAxis("Horizontal");
 			//			float v = CrossPlatformInputManager.GetAxis("Vertical");
-			Vector3 carPosition = car.transform.position;
+			carPosition = car.transform.position;
 
 
 			float dist = Vector3.Distance(carPosition, interPositions[index]);
-			print ("index: "+interPositions[index]);
+//			print (index+" : " +interPositions[index]);
 			//			print("Distance to other: " + dist);
 //			print (m_Car.CurrentSpeed +" h: " + h + " v: "+ v +"distance: "+ dist + " m_Car.transform.eulerAngles: "+ m_Car.transform.eulerAngles.y);
 			//			print (car.transform.position.x);
