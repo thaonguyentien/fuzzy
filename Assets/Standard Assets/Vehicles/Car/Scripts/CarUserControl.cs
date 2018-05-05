@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.Networking;
+using System.Collections;
 
 namespace UnityStandardAssets.Vehicles.Car
 {
@@ -19,6 +21,7 @@ namespace UnityStandardAssets.Vehicles.Car
 		Vector3 carPosition;
 		private void Awake()
 		{
+			StartCoroutine(GetText());
 			// get the car controller
 			m_Car = GetComponent<CarController>();
 			inters= GameObject.FindGameObjectsWithTag("inter");
@@ -151,6 +154,27 @@ namespace UnityStandardAssets.Vehicles.Car
 			#else
 			m_Car.Move(h, v, v, 0f);
 			#endif
+		}
+		IEnumerator GetText()
+		{
+			using (UnityWebRequest www = UnityWebRequest.Get("http://127.0.0.1:3000"))
+			{
+				yield return www.Send();
+
+				if (www.isNetworkError || www.isHttpError)
+				{
+					Debug.Log(www.error);
+				}
+				else
+				{
+					// Show results as text
+					Debug.Log(www.downloadHandler.text);
+
+					// Or retrieve results as binary data
+					byte[] results = www.downloadHandler.data;
+					print (results);
+				}
+			}
 		}
 	}
 }
