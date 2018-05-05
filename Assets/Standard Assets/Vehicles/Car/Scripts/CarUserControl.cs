@@ -21,7 +21,7 @@ namespace UnityStandardAssets.Vehicles.Car
 		Vector3 carPosition;
 		private void Awake()
 		{
-			StartCoroutine(GetText());
+			StartCoroutine(GetText(0,4));
 			// get the car controller
 			m_Car = GetComponent<CarController>();
 			inters= GameObject.FindGameObjectsWithTag("inter");
@@ -155,9 +155,10 @@ namespace UnityStandardAssets.Vehicles.Car
 			m_Car.Move(h, v, v, 0f);
 			#endif
 		}
-		IEnumerator GetText()
+		IEnumerator GetText(int start,int target)
 		{
-			using (UnityWebRequest www = UnityWebRequest.Get("http://127.0.0.1:3000"))
+			String url = "http://127.0.0.1:3000/:" + start + "/:" + target;
+			using (UnityWebRequest www = UnityWebRequest.Get(url))
 			{
 				yield return www.Send();
 
