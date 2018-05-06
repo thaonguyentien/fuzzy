@@ -9,18 +9,29 @@ namespace UnityStandardAssets.Vehicles.Car
 	[RequireComponent(typeof (CarController))]
 	public class CarUserControl : MonoBehaviour
 	{
+
+		bool flag_chuong_ngai_vat=false;
+		Ray ray;
+		RaycastHit hit;
+		public GameObject chuong_ngai_vat;
+		float timeLeft=10.0f;
+
+		public Camera overview_camera;
+		public Camera main_camera;
 		private CarController m_Car; // the car controller we want to use
 		public GameObject car;
-		//		public GameObject inter;
+		public GameObject[] inters = new GameObject[20];
 		float dist_pre = 999999f;
 		bool[] isTurns=new bool[20];
 		bool[] turnDones=new bool[20];
-		public GameObject[] inters= new GameObject[20];
 		private Vector3[] interPositions = new Vector3[20]; 
 		int index;
 		Vector3 carPosition;
+		int[] checkpoint = new int[20];
 		private void Awake()
 		{
+			ShowOverView ();
+			ShowMain ();
 			StartCoroutine(GetText(0,4));
 			// get the car controller
 			m_Car = GetComponent<CarController>();
@@ -36,10 +47,28 @@ namespace UnityStandardAssets.Vehicles.Car
 
 
 		}
-
-
+			
 		private void FixedUpdate()
 		{
+			timeLeft -= Time.deltaTime;
+			ray=Camera.main.ScreenPointToRay(Input.mousePosition);
+			if (timeLeft < 0) {
+				GameObject cnt = GameObject.Find ("chuong_ngai_vat(Clone)");
+				print("destroy");
+				Destroy (cnt);
+				flag_chuong_ngai_vat = false;
+			}
+			if(Physics.Raycast(ray,out hit))
+			{
+
+				if(Input.GetKey(KeyCode.Mouse0) && flag_chuong_ngai_vat==false)
+				{
+					GameObject obj=Instantiate(chuong_ngai_vat,new Vector3(hit.point.x,hit.point.y,hit.point.z), Quaternion.identity) as GameObject;
+					flag_chuong_ngai_vat = true;
+
+				}
+
+			}
 
 			float h = 0;// am re phai, duong re trai
 			float v = 1;
@@ -155,6 +184,17 @@ namespace UnityStandardAssets.Vehicles.Car
 			m_Car.Move(h, v, v, 0f);
 			#endif
 		}
+
+		private void ShowOverView() {
+			overview_camera.enabled = true;
+			main_camera.enabled = false;
+		}
+
+		private void ShowMain() {
+			overview_camera.enabled = false;
+			main_camera.enabled = true;
+		}
+
 		IEnumerator GetText(int start,int target)
 		{
 			String url = "http://127.0.0.1:3000/:" + start + "/:" + target;
@@ -169,11 +209,21 @@ namespace UnityStandardAssets.Vehicles.Car
 				else
 				{
 					// Show results as text
-					Debug.Log(www.downloadHandler.text);
+//					Debug.Log(www.downloadHandler.text);
 
 					// Or retrieve results as binary data
 					byte[] results = www.downloadHandler.data;
-					print (results);
+//					print ("huong" + results[1]);
+					String str = System.Text.Encoding.Default.GetString(results);
+
+					str = str.Substring (1,str.Length-2);
+//					print ("res: " + str);
+					String[] trace = str.Split(","[0]);
+					for(int i= 0; i < trace.Length; i++){
+//						print (trace [i]);
+						checkpoint[i]= System.Int32.Parse(trace[i]);
+						Debug.Log (checkpoint [i]);
+					}
 				}
 			}
 		}
