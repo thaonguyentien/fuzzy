@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.Networking;
 using System.Collections;
+using UnityEngine.UI;
 
 namespace UnityStandardAssets.Vehicles.Car
 {
@@ -14,6 +15,7 @@ namespace UnityStandardAssets.Vehicles.Car
 		Ray ray;
 		RaycastHit hit;
 		public GameObject chuong_ngai_vat;
+		public GameObject timer;
 		float timeLeft=10.0f;
 
 		public Camera overview_camera;
@@ -30,6 +32,7 @@ namespace UnityStandardAssets.Vehicles.Car
 		int[] checkpoint = new int[20];
 		private void Awake()
 		{
+			
 			ShowOverView ();
 			ShowMain ();
 			StartCoroutine(GetText(0,4));
@@ -50,12 +53,19 @@ namespace UnityStandardAssets.Vehicles.Car
 			
 		private void FixedUpdate()
 		{
-			timeLeft -= Time.deltaTime;
+			if (flag_chuong_ngai_vat == true) {
+				
+				timeLeft -= Time.deltaTime;
+				timer.GetComponent<Text> ().text = " " + timeLeft.ToString();
+			} else {
+				timer.GetComponent<Text> ().text = " ";
+			}
 			ray=Camera.main.ScreenPointToRay(Input.mousePosition);
 			if (timeLeft < 0) {
 				GameObject cnt = GameObject.Find ("chuong_ngai_vat(Clone)");
 				print("destroy");
 				Destroy (cnt);
+				timeLeft = 10.0f;
 				flag_chuong_ngai_vat = false;
 			}
 			if(Physics.Raycast(ray,out hit))
@@ -222,7 +232,7 @@ namespace UnityStandardAssets.Vehicles.Car
 					for(int i= 0; i < trace.Length; i++){
 //						print (trace [i]);
 						checkpoint[i]= System.Int32.Parse(trace[i]);
-						Debug.Log (checkpoint [i]);
+//						Debug.Log (checkpoint [i]);
 					}
 				}
 			}

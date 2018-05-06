@@ -40,8 +40,8 @@ MonoBehaviour:
     y: 0
     width: 352
     height: 291
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_MinSize: {x: 308, y: 221}
   m_MaxSize: {x: 8008, y: 4021}
   vertical: 0
-  controlID: 162
+  controlID: 167
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_MinSize: {x: 815, y: 471}
   m_MaxSize: {x: 22010, y: 14021}
   vertical: 0
-  controlID: 160
+  controlID: 106
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_MinSize: {x: 308, y: 442}
   m_MaxSize: {x: 8008, y: 8042}
   vertical: 1
-  controlID: 161
+  controlID: 107
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -302,8 +302,8 @@ MonoBehaviour:
     y: 0
     width: 483
     height: 291
-  m_MinSize: {x: 104, y: 121}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -390,14 +390,14 @@ MonoBehaviour:
     height: 425
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1533.3653869628906
+  lastFramingTime: 904.2727870941162
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 180.09842, y: -72.548706, z: 149.41293}
+    m_Target: {x: 320.03854, y: 268.5241, z: 30.443466}
     speed: 2
-    m_Value: {x: 180.09842, y: -72.548706, z: 149.41293}
+    m_Value: {x: 320.03854, y: 268.5241, z: 30.443466}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -421,13 +421,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.6160172, y: -0.085765615, z: 0.06772481, w: -0.7801156}
+    m_Target: {x: -0.244535, y: -0.10014425, z: 0.025400197, w: -0.9641206}
     speed: 2
-    m_Value: {x: -0.6160172, y: -0.085765615, z: 0.06772481, w: -0.7801156}
+    m_Value: {x: -0.244535, y: -0.10014425, z: 0.025400197, w: -0.9641206}
   m_Size:
-    m_Target: 1417.1998
+    m_Target: 439.0517
     speed: 2
-    m_Value: 1417.1998
+    m_Value: 439.0517
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -467,10 +467,10 @@ MonoBehaviour:
     height: 302
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 16}
+    scrollPos: {x: 0, y: 3}
     m_SelectedIDs: 9cfbffff
     m_LastClickedID: -1124
-    m_ExpandedIDs: 9cfbffff9efbffff00000000ec460000
+    m_ExpandedIDs: 3090feff9efbffff000000000e4600001a470000124c00001a4d0000a64f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -532,18 +532,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Standard Assets/Vehicles/Car/Scripts
+    - Assets/EasyRoads3D
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Standard Assets/Vehicles/Car/Scripts
+  - Assets/EasyRoads3D
   m_LastFoldersGridSize: 16
   m_LastProjectPath: /Users/nguyentienthao/Desktop/unity-endless-runner/Official_Fuzzy
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 280}
-    m_SelectedIDs: 0e2f0000
-    m_LastClickedID: 12046
+    m_SelectedIDs: 182f0000
+    m_LastClickedID: 12056
     m_ExpandedIDs: 00000000c2290000d23100006c3200000e33000098360000763800008a390000bc39000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 06230000e2370000c8230000f6230000cc1b0000b81b0000d45d00001c610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
