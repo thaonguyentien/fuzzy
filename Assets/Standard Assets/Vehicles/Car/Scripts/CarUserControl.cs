@@ -10,8 +10,9 @@ namespace UnityStandardAssets.Vehicles.Car
 	[RequireComponent(typeof (CarController))]
 	public class CarUserControl : MonoBehaviour
 	{
+		int len=-1;
 		public Dropdown m_Dropdown;
-
+		bool flag_inter=false;
 		bool flag_chuong_ngai_vat=false;
 		Ray ray;
 		RaycastHit hit;
@@ -27,28 +28,22 @@ namespace UnityStandardAssets.Vehicles.Car
 		float dist_pre = 999999f;
 		bool[] isTurns=new bool[20];
 		bool[] turnDones=new bool[20];
-		private Vector3[] interPositions = new Vector3[20]; 
-		int index;
+		private Vector3[] interPositions= new Vector3[20]; 
+		int index=0;
 		Vector3 carPosition;
-		int[] checkpoint = new int[20];
+		int[] checkpoints = new int[20];
 
 		private void Awake()
 		{
-			checkpoint [0] = -1;
 			ShowOverView ();
 			ShowMain ();
-//			StartCoroutine(GetText(0,4));
-			// get the car controller
+
 			m_Car = GetComponent<CarController>();
-			inters= GameObject.FindGameObjectsWithTag("inter");
-			index=inters.Length-1;
+
 			//			inters.Add (inter);
 			//			inters[1] = GameObject.Find("Inter2");
 			car = GameObject.Find("Car");
-			for (int i=0;i<inters.Length;++i) {
-				interPositions[i] = inters[i].transform.position;
-				//				print(interPositions[i]);
-			}
+
 
 
 		}
@@ -59,9 +54,33 @@ namespace UnityStandardAssets.Vehicles.Car
 				Destroy (m_Dropdown);
 				StartCoroutine(GetMap(0,m_Dropdown.value));
 				print ("target:" + m_Dropdown.value);
-				if(checkpoint[0]!=-1)	{
-						if (flag_chuong_ngai_vat == true) {
 
+
+
+				if(len!=-1)	{
+					print (checkpoints.Length);
+						if (flag_inter == false) {
+							//					
+							//					inters = GameObject.FindGameObjectsWithTag ("inter");
+							//					index = inters.Length - 1;
+							//					flag_inter = true;
+							//					for (int i=0;i<inters.Length;++i) {
+							//						 = inters[i].transform.position;
+							//						print(inters[i].transform.position);
+							//					}
+						for(int i=0;i<len;i++){
+							print(checkpoints[i]);
+							String name = "Inter" + checkpoints[i];
+							GameObject point = GameObject.Find (name);
+							print ("point "+point.transform.position);
+							interPositions[i]=point.transform.position;
+							print (point.transform.position);
+							point.gameObject.tag = "inter";
+								
+							}
+						}
+						if (flag_chuong_ngai_vat == true) {
+							
 							timeLeft -= Time.deltaTime;
 							timer.GetComponent<Text> ().text = " " + timeLeft.ToString ();
 						} else {
@@ -99,8 +118,11 @@ namespace UnityStandardAssets.Vehicles.Car
 						//			print (" h: " + h + " v: "+ v +"distance: "+ dist + " pre_dist:" + dist_pre + " isTurn " + isTurns[index] );
 						//			print (car.transform.position.x);
 						//			print("dist: " +dist + "turnDones: "+  turnDones[index]); 
-
-						if (interPositions [index].x < interPositions [index - 1].x) {//turn right x
+					if (car.transform.position.x > interPositions[len-1].x &&  car.transform.position.y > interPositions[len-1].y 
+						&& car.transform.position.z > interPositions[len-1].z) {
+						Time.timeScale = 0;
+					}
+						if (interPositions [index].x < interPositions [index + 1].x) {//turn right x
 							if (dist <= 23f && (turnDones [index] == false)) {
 								v = 0;
 								h = 0.36f;
@@ -113,10 +135,8 @@ namespace UnityStandardAssets.Vehicles.Car
 								h = 0;
 								print ("turn right x: " + index);
 								turnDones [index] = true;
-								index--;
-								if (index < 0) {
-									Time.timeScale = 0;
-								}
+								index++;
+
 								dist_pre = 999999f;
 								print ("turnDone");
 								//				isTurn = false;
@@ -134,9 +154,9 @@ namespace UnityStandardAssets.Vehicles.Car
 								h = 0;
 								print ("turn left x: " + index);
 								turnDones [index] = true;
-								index--;
+								index++;
 								if (index < 0) {
-									Time.timeScale = 0;
+//									Time.timeScale = 0;
 								}
 								dist_pre = 999999f;
 								print ("turnDone");
@@ -155,7 +175,7 @@ namespace UnityStandardAssets.Vehicles.Car
 								h = 0;
 								print ("turn left z: " + index);
 								turnDones [index] = true;
-								index--;
+								index++;
 								if (index < 0) {
 									Time.timeScale = 0;
 								}
@@ -176,7 +196,7 @@ namespace UnityStandardAssets.Vehicles.Car
 								h = 0;
 								print ("turn right z: " + index);
 								turnDones [index] = true;
-								index--;
+								index++;
 								if (index < 0) {
 									Time.timeScale = 0;
 								}
@@ -237,9 +257,10 @@ namespace UnityStandardAssets.Vehicles.Car
 					str = str.Substring (1,str.Length-2);
 					print ("checkpoints: " + str);
 					String[] trace = str.Split(","[0]);
+					len = trace.Length;
 					for(int i= 0; i < trace.Length; i++){
 //						print (trace [i]);
-						checkpoint[i]= System.Int32.Parse(trace[i]);
+						checkpoints[i]= System.Int32.Parse(trace[i]);
 //						Debug.Log (checkpoint [i]);
 					}
 				}
