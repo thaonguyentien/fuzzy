@@ -12,7 +12,7 @@ namespace UnityStandardAssets.Vehicles.Car
 	{
 		float h = 0;// am re phai, duong re trai
 		float v = 1;
-
+		bool chieu_duong=true;
 		bool huong_z=true;
 		int len=-1;
 		public Dropdown m_Dropdown;
@@ -244,7 +244,7 @@ namespace UnityStandardAssets.Vehicles.Car
 					print ("turn done" + index);
 				}
 
-				if (current.x < next.x) { // re phai theo chieu z
+				if (current.x < next.x && chieu_duong == true) { // re phai theo chieu z
 					
 					if (dist <= 23f && (turnDones [index] == false)) {
 						v = 0;
@@ -266,6 +266,29 @@ namespace UnityStandardAssets.Vehicles.Car
 						//				isTurn = false;
 					}
 				}
+
+				if (current.x < next.x && chieu_duong == false) { // re phai theo chieu z
+
+					if (dist <= 23f && (turnDones [index] == false)) {
+						v = 0;
+						h = -0.36f;
+						isTurns [index] = true;
+						print ("dang re");
+					} 
+					if (car.transform.eulerAngles.y<100) {
+						//						m_Car.transform.eulerAngles = (new Vector3 (0, 80, 0));
+						v = 1;
+						h = 0;
+						print (" chieu am :re phai theo chieu z: " + index);
+						turnDones [index] = true;
+						index++;
+
+						dist_pre = 999999f;
+						print ("turnDone" +index);
+						huong_z = false;
+						//				isTurn = false;
+					}
+				}
 				// chua test
 				if (current.x > next.x) { // re trai theo chieu z
 					
@@ -276,7 +299,7 @@ namespace UnityStandardAssets.Vehicles.Car
 						print ("dang re");
 					} 
 //					if (dist > (dist_pre) && dist > 20f && isTurns [index]) {
-					if(m_Car.transform.eulerAngles.y>90){
+					if(car.transform.eulerAngles.y>90){
 //						m_Car.transform.eulerAngles = (new Vector3 (0, -90, 0));
 						v = 1;
 						h = 0;
@@ -326,6 +349,7 @@ namespace UnityStandardAssets.Vehicles.Car
 						dist_pre = 999999f;
 						print ("turnDone" + index);
 						huong_z=true;
+						chieu_duong = false;
 						//				isTurn = false;
 					}
 				}
