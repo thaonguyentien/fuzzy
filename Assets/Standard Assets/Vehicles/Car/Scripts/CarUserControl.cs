@@ -10,6 +10,8 @@ namespace UnityStandardAssets.Vehicles.Car
 	[RequireComponent(typeof (CarController))]
 	public class CarUserControl : MonoBehaviour
 	{
+		int flag_handle=0;
+		float speed;
 		float h = 0;// am re phai, duong re trai
 		float v = 1;
 		bool chieu_duong=true;
@@ -23,7 +25,7 @@ namespace UnityStandardAssets.Vehicles.Car
 		public GameObject chuong_ngai_vat;
 		public GameObject timer;
 		float timeLeft=10.0f;
-
+		GameObject obj;
 		public Camera overview_camera;
 		public Camera main_camera;
 		private CarController m_Car; // the car controller we want to use
@@ -48,18 +50,16 @@ namespace UnityStandardAssets.Vehicles.Car
 			//			inters[1] = GameObject.Find("Inter2");
 			car = GameObject.Find("Car");
 
-
-
 		}
 			
 		private void FixedUpdate()
 		{
+			
 			if (m_Dropdown.value != 0) {
 				Destroy (m_Dropdown);
 				StartCoroutine(GetMap(0,m_Dropdown.value));
 
 				if(len!=-1)	{
-	//					print ("checkpoints length: " + checkpoints.Length);
 					if (flag_inter == false) {
 						//					
 						//					inters = GameObject.FindGameObjectsWithTag ("inter");
@@ -81,9 +81,20 @@ namespace UnityStandardAssets.Vehicles.Car
 						}
 					}
 					if (flag_chuong_ngai_vat == true) {
-						
+						flag_handle++;
 						timeLeft -= Time.deltaTime;
 						timer.GetComponent<Text> ().text = " " + timeLeft.ToString ();
+//						print ("getsppeed");
+//						print((timeLeft * 10) % 2);
+						if ((flag_handle%10)==0) {
+							flag_handle = 0;
+							float distance_to_chuong_ngai_vat=(int)(Vector3.Distance (carPosition, obj.transform.position));
+							print ("distance: "+   distance_to_chuong_ngai_vat  +"+ speed" + speed);
+							StartCoroutine(GetSpeed(distance_to_chuong_ngai_vat));
+							m_Car.SetSpeed(speed,huong_z);
+						}
+
+
 					} else {
 						timer.GetComponent<Text> ().text = " ";
 					}
@@ -98,9 +109,12 @@ namespace UnityStandardAssets.Vehicles.Car
 					if (Physics.Raycast (ray, out hit)) {
 
 						if (Input.GetKey (KeyCode.Mouse0) && flag_chuong_ngai_vat == false) {
-							GameObject obj = Instantiate (chuong_ngai_vat, new Vector3 (hit.point.x, hit.point.y, hit.point.z), Quaternion.identity) as GameObject;
+							obj = Instantiate (chuong_ngai_vat, new Vector3 (hit.point.x, hit.point.y, hit.point.z), Quaternion.identity) as GameObject;
 							flag_chuong_ngai_vat = true;
+							float distance_to_chuong_ngai_vat=(int)(Vector3.Distance (carPosition, obj.transform.position));
 
+							StartCoroutine(GetSpeed(distance_to_chuong_ngai_vat));
+							m_Car.SetSpeed(speed,huong_z);
 						}
 
 					}
@@ -118,8 +132,9 @@ namespace UnityStandardAssets.Vehicles.Car
 //						&& car.transform.position.z > interPositions[len-1].z) {
 //						Time.timeScale = 0;
 //					}
-					if (stop_distance < 20) {
+					if (stop_distance < 15) {
 						Time.timeScale = 0;
+
 					}
 					logicDirection (interPositions [index], interPositions [index + 1]);
 				
@@ -139,6 +154,46 @@ namespace UnityStandardAssets.Vehicles.Car
 				
 		}
 
+
+		IEnumerator GetSpeed(float distance)
+		{
+//			print ("getspped");
+			String url = "http://127.0.0.1:3000/getSpeed/" + distance ;
+//			print (url);
+			using (UnityWebRequest www = UnityWebRequest.Get(url))
+			{
+				yield return www.Send();
+
+				if (www.isNetworkError || www.isHttpError)
+				{
+					Debug.Log(www.error);
+				}
+				else
+				{
+					// Show results as text
+					//					Debug.Log(www.downloadHandler.text);
+
+					// Or retrieve results as binary data
+					byte[] results = www.downloadHandler.data;
+					//					print ("huong" + results[1]);
+					String str = System.Text.Encoding.Default.GetString(results);
+
+					str = str.Substring (2,str.Length-4);
+					//					print ("checkpoints: " + str);
+					//					String[] trace = str.Split(","[0]);
+					//					len = trace.Length;
+					//					for(int i= 0; i < trace.Length; i++){
+					//						print (trace [i]);
+
+					speed= float.Parse(str);
+//					print ("speed" + speed);
+					//						Debug.Log (checkpoint [i]);
+					//					}
+				}
+			}
+		}
+
+
 		private void ShowOverView() {
 			overview_camera.enabled = true;
 			main_camera.enabled = false;
@@ -151,6 +206,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
 		private void logicDirection(Vector3 current,Vector3 next){
 //			print (car.transform.eulerAngles);
+//			print("logicDirection" + index) ;
 			if (huong_z == true) {// dang di theo huong z
 				if (current.z < next.z) {// tiep tuc di thang
 					v = 1;
@@ -284,8 +340,6 @@ namespace UnityStandardAssets.Vehicles.Car
 //					if (dist > (dist_pre) && dist > 20f && isTurns [index]) {
 					if(car.transform.eulerAngles.y<13){
 //						m_Car.transform.rotation = ( Quaternion.Euler (0, 45, 0));
-
-						Wait ();
 						v = 1;
 						h = 0;
 						print ("turn left z: " + index);
@@ -338,6 +392,8 @@ namespace UnityStandardAssets.Vehicles.Car
 				}
 			}
 		}
+
+
 
 		IEnumerator Wait(){
 			yield return new WaitForSeconds (5f);

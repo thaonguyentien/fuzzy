@@ -130,7 +130,15 @@ namespace UnityStandardAssets.Vehicles.Car
             Revs = ULerp(revsRangeMin, revsRangeMax, m_GearFactor);
         }
 
+		public void SetSpeed(float speed,bool huong_z){
+			if (huong_z == true) {
+				
+				m_Rigidbody.velocity = new Vector3 (0, 0, speed);
+			} else {
+				m_Rigidbody.velocity = new Vector3 (speed, 0, 0);
+			}
 
+		}
         public void Move(float steering, float accel, float footbrake, float handbrake)
         {
 //			float distance=Vector3.Distance(car.transform.position, border.transform.position);
