@@ -113,12 +113,14 @@ namespace UnityStandardAssets.Vehicles.Car
 
 					dist = Vector3.Distance (carPosition, interPositions [index]);
 //					print (index + " : " + interPositions [index]);
-
-					if (car.transform.position.x > interPositions[len-1].x &&  car.transform.position.y > interPositions[len-1].y 
-						&& car.transform.position.z > interPositions[len-1].z) {
+					float stop_distance=Vector3.Distance (carPosition, interPositions [len-1]);
+//					if (car.transform.position.x > interPositions[len-1].x &&  car.transform.position.y > interPositions[len-1].y 
+//						&& car.transform.position.z > interPositions[len-1].z) {
+//						Time.timeScale = 0;
+//					}
+					if (stop_distance < 15) {
 						Time.timeScale = 0;
 					}
-
 					logicDirection (interPositions [index], interPositions [index + 1]);
 				
 //					if (interPositions [index].x < interPositions [index + 1].x) {//turn right x
