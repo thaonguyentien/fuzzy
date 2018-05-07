@@ -235,11 +235,13 @@ namespace UnityStandardAssets.Vehicles.Car
 		}
 
 		private void logicDirection(Vector3 current,Vector3 next){
-			print (car.transform.eulerAngles);
+//			print (car.transform.eulerAngles);
 			if (huong_z == true) {// dang di theo huong z
 				if (current.z < next.z) {// tiep tuc di thang
 					v = 1;
 					h = 0;
+					index++;
+					print ("turn done" + index);
 				}
 
 				if (current.x < next.x) { // re phai theo chieu z
@@ -250,8 +252,8 @@ namespace UnityStandardAssets.Vehicles.Car
 						isTurns [index] = true;
 						print ("dang re");
 					} 
-					if (dist > (dist_pre) && dist > 20f && isTurns [index]) {
-						m_Car.transform.eulerAngles = (new Vector3 (0, 80, 0));
+					if (car.transform.eulerAngles.y>80) {
+//						m_Car.transform.eulerAngles = (new Vector3 (0, 80, 0));
 						v = 1;
 						h = 0;
 						print ("re phai theo chieu z: " + index);
@@ -259,7 +261,7 @@ namespace UnityStandardAssets.Vehicles.Car
 						index++;
 
 						dist_pre = 999999f;
-						print ("turnDone");
+						print ("turnDone" +index);
 						huong_z = false;
 						//				isTurn = false;
 					}
@@ -294,36 +296,39 @@ namespace UnityStandardAssets.Vehicles.Car
 			} 
 			if(huong_z == false){// huong theo chieu x
 				print("theo chieu x");
-				if (current.x < next.x) {// tiep tuc di thang
+				if ((current.x + 99)  < next.x) {// tiep tuc di thang
 					print("di thang x");
 					v = 1;
 					h = 0;
+					index++;
+					print ("turn done" + index);
 				}
 
-//				if (current.z < next.z) {// re phai theo x
-//					print("re phai theo chieu x");
-//					huong_z=true;
-//					if (dist <= 23f && (turnDones [index] == false)) {
-//						v = 0;
-//						h = 0.36f;
-//						isTurns [index] = true;
-//						print ("dang re");
-//					} 
-//					if (dist > (dist_pre) && dist > 20f && isTurns [index]) {
+				if (current.z > next.z) {// re phai theo x
+					print("re phai theo chieu x");
+
+					if (dist <= 23f && (turnDones [index] == false)) {
+						v = 0;
+						h = 0.36f;
+						isTurns [index] = true;
+						print ("dang re");
+					} 
+					if (car.transform.eulerAngles.y>170) {
 //						m_Car.transform.eulerAngles = (new Vector3 (0, 170, 0));
-//						v = 1;
-//						h = 0;
-//						print ("turn right z: " + index);
-//						turnDones [index] = true;
-//						index++;
-//						if (index < 0) {
-//							Time.timeScale = 0;
-//						}
-//						dist_pre = 999999f;
-//						print ("turnDone");
-//						//				isTurn = false;
-//					}
-//				}
+						v = 1;
+						h = 0;
+						print ("turn right z: " + index);
+						turnDones [index] = true;
+						index++;
+						if (index < 0) {
+							Time.timeScale = 0;
+						}
+						dist_pre = 999999f;
+						print ("turnDone" + index);
+						huong_z=true;
+						//				isTurn = false;
+					}
+				}
 //
 				if (current.z < next.z) {// re trai theo x
 					print("re trai x");
@@ -332,7 +337,7 @@ namespace UnityStandardAssets.Vehicles.Car
 						v = 0;
 						h = -0.36f;
 						isTurns [index] = true;
-						print ("dang re");
+//						print ("dang re");
 					} 
 //					if (dist > (dist_pre) && dist > 20f && isTurns [index]) {
 					if(car.transform.eulerAngles.y<13){
