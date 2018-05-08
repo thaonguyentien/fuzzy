@@ -110,19 +110,25 @@ namespace UnityStandardAssets.Vehicles.Car
 							
 						}
 					}
-//					flag_handle++;
-//					if ((flag_handle%10)==0 && flag_traffic == false) {
-//						
-//						flag_handle = 0;
-//						float distance_to_traffic= (int)(Vector3.Distance (carPosition, traffic));
-//
-//						StartCoroutine (GetSpeedTraffic (distance_to_traffic,light_status,time_light));
-////						m_Car.SetSpeed (speed-15, huong_z);
-////						print("GetSpeedTraffic"+ speed);
-//						//							}
-//					}
+					if (flag_traffic == false) {
+						
+						flag_handle++;
+					}
+					if ((flag_handle%10)==0 && flag_traffic == false) {
+						
+						flag_handle = 0;
+						float distance_to_traffic= (int)(Vector3.Distance (carPosition, traffic));
 
-					if ((Vector3.Distance (carPosition, traffic)) < 10) {
+						StartCoroutine (GetSpeedTraffic (distance_to_traffic,light_status,time_light));
+						if (speed > 30) {
+							speed -= 20;
+						}
+						m_Car.SetSpeed (speed, huong_z);
+//						print("GetSpeedTraffic"+ speed);
+						//							}
+					}
+
+					if (isTurns[0]) {
 						flag_traffic = true;
 					}
 
@@ -310,7 +316,7 @@ namespace UnityStandardAssets.Vehicles.Car
 						isTurns [index] = true;
 						print ("dang re");
 					} 
-					if (car.transform.eulerAngles.y>80) {
+					if (car.transform.eulerAngles.y>80 && isTurns[index]==true) {
 //						m_Car.transform.eulerAngles = (new Vector3 (0, 80, 0));
 						v = 1;
 						h = 0;
@@ -333,7 +339,7 @@ namespace UnityStandardAssets.Vehicles.Car
 						isTurns [index] = true;
 						print ("dang re");
 					} 
-					if (car.transform.eulerAngles.y<100) {
+					if (car.transform.eulerAngles.y<100 && isTurns[index]==true ) {
 						//						m_Car.transform.eulerAngles = (new Vector3 (0, 80, 0));
 						v = 1;
 						h = 0;
@@ -358,7 +364,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
 					} 
 //					if (dist > (dist_pre) && dist > 20f && isTurns [index]) {
-					if(car.transform.eulerAngles.y>90){
+					if(car.transform.eulerAngles.y>90 && isTurns[index]==true ){
 //						m_Car.transform.eulerAngles = (new Vector3 (0, -90, 0));
 						v = 1;
 						h = 0;
@@ -397,7 +403,7 @@ namespace UnityStandardAssets.Vehicles.Car
 						isTurns [index] = true;
 						print ("dang re");
 					} 
-					if (car.transform.eulerAngles.y>170) {
+					if (car.transform.eulerAngles.y>170 && isTurns[index]==true ) {
 //						m_Car.transform.eulerAngles = (new Vector3 (0, 170, 0));
 						v = 1;
 						h = 0;
@@ -425,7 +431,7 @@ namespace UnityStandardAssets.Vehicles.Car
 //						print ("dang re");
 					} 
 //					if (dist > (dist_pre) && dist > 20f && isTurns [index]) {
-					if(car.transform.eulerAngles.y<13){
+					if(car.transform.eulerAngles.y<13 && isTurns[index]==true ){
 //						m_Car.transform.rotation = ( Quaternion.Euler (0, 45, 0));
 						v = 1;
 						h = 0;
