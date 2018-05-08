@@ -13,7 +13,7 @@ namespace UnityStandardAssets.Vehicles.Car
 		bool flag_traffic=false;
 		bool flag_traffic2=false;
 		bool flag_getMap= true;
-		int flag_handle=0;
+		int flag_handle=0,flag_handle2=0;
 		float speed;
 		float h = 0;// am re phai, duong re trai
 		float v = 1;
@@ -111,16 +111,13 @@ namespace UnityStandardAssets.Vehicles.Car
 							
 						}
 					}
-					if (flag_traffic == false) {
-						
-						flag_handle++;
-					}
+
 					if ((flag_handle%10)==0 && flag_traffic == false) {
 						
 						flag_handle = 0;
 						float distance_to_traffic= (int)(Vector3.Distance (carPosition, traffic));
 
-						StartCoroutine (GetSpeedTraffic (distance_to_traffic,light_status,time_light));
+						StartCoroutine (GetSpeedTraffic (distance_to_traffic-2,light_status,time_light));
 						if (speed > 30) {
 							speed -= 20;
 						}
@@ -128,14 +125,18 @@ namespace UnityStandardAssets.Vehicles.Car
 //						print("GetSpeedTraffic"+ speed);
 						//							}
 					}
-
-					if (flag_traffic2 == false  ) {
+					if (flag_traffic == false) {
 
 						flag_handle++;
 					}
-					if ((flag_handle%10)==0 && flag_traffic2 == false && carPosition.x > 90 && carPosition.x <110 && carPosition.z > 300) {
 
-						flag_handle = 0;
+					if (flag_traffic2 == false  ) {
+
+						flag_handle2++;
+					}
+					if ((flag_handle2%10)==0 && flag_traffic2 == false && carPosition.x > 90 && carPosition.x <110 && carPosition.z > 300) {
+
+						flag_handle2 = 0;
 						float distance_to_traffic= (int)(Vector3.Distance (carPosition, traffic2));
 
 						StartCoroutine (GetSpeedTraffic (distance_to_traffic,light_status,time_light));
@@ -189,6 +190,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
 							StartCoroutine(GetSpeed(distance_to_chuong_ngai_vat,"barrier"));
 							m_Car.SetSpeed(speed,huong_z);
+							print ("set speed cho chuong ngai vat" + speed + " distance   " + distance_to_chuong_ngai_vat);
 						}
 
 					}
