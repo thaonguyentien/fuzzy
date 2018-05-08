@@ -159,6 +159,7 @@
      <Compile Include="Assets\AstarPathfindingProject\Utilities\ProfileHelper.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
+     <Compile Include="Assets\control_light.cs" />
      <Compile Include="Assets\RoadArchitect\GSDRigidBody.cs" />
      <Compile Include="Assets\RoadArchitect\GSDRoad.cs" />
      <Compile Include="Assets\RoadArchitect\GSDRoadAutomation.cs" />

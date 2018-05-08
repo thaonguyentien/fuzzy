@@ -10,6 +10,8 @@ namespace UnityStandardAssets.Vehicles.Car
 	[RequireComponent(typeof (CarController))]
 	public class CarUserControl : MonoBehaviour
 	{
+		bool flag_traffic=false;
+		bool flag_getMap= true;
 		int flag_handle=0;
 		float speed;
 		float h = 0;// am re phai, duong re trai
@@ -39,11 +41,18 @@ namespace UnityStandardAssets.Vehicles.Car
 		Vector3 carPosition;
 		int[] checkpoints = new int[20];
 		float dist;
+		float time=0;
+		string light_status;
+		int time_light;
+		Vector3 traffic = new Vector3 (5, 0, 100);
+
 		private void Awake()
 		{
 			ShowOverView ();
 			ShowMain ();
 
+				
+//			print (light.);
 			m_Car = GetComponent<CarController>();
 
 			//			inters.Add (inter);
@@ -54,10 +63,31 @@ namespace UnityStandardAssets.Vehicles.Car
 			
 		private void FixedUpdate()
 		{
-			
+			time += Time.deltaTime;
+			double adj_time = time;
+			if (adj_time <= 20) {
+				light_status = "GREEN";
+				time_light = 20 -(int)Math.Ceiling(adj_time);
+			} else if (adj_time <= 25) {
+				light_status = "YELLOW";
+				time_light =  5 - (int )Math.Ceiling(adj_time) + 20;
+			} else {
+				light_status = "RED";
+				time_light = 10 -(int)Math.Ceiling(adj_time) + 25;
+				if (time_light == 1) {
+					time = 0;
+				}
+			}
+//			print ("timeL "+adj_time);
+			timer.GetComponent<Text> ().text = " " + time_light.ToString ();
 			if (m_Dropdown.value != 0) {
 				Destroy (m_Dropdown);
-				StartCoroutine(GetMap(0,m_Dropdown.value));
+				if (flag_getMap == true) {
+					StartCoroutine(GetMap(0,m_Dropdown.value));
+					flag_getMap = false;
+				}
+
+
 
 				if(len!=-1)	{
 					if (flag_inter == false) {
@@ -80,6 +110,22 @@ namespace UnityStandardAssets.Vehicles.Car
 							
 						}
 					}
+//					flag_handle++;
+//					if ((flag_handle%10)==0 && flag_traffic == false) {
+//						
+//						flag_handle = 0;
+//						float distance_to_traffic= (int)(Vector3.Distance (carPosition, traffic));
+//
+//						StartCoroutine (GetSpeedTraffic (distance_to_traffic,light_status,time_light));
+////						m_Car.SetSpeed (speed-15, huong_z);
+////						print("GetSpeedTraffic"+ speed);
+//						//							}
+//					}
+
+					if ((Vector3.Distance (carPosition, traffic)) < 10) {
+						flag_traffic = true;
+					}
+
 					if (flag_chuong_ngai_vat == true) {
 						flag_handle++;
 						timeLeft -= Time.deltaTime;
@@ -90,14 +136,17 @@ namespace UnityStandardAssets.Vehicles.Car
 							flag_handle = 0;
 							float distance_to_chuong_ngai_vat=(int)(Vector3.Distance (carPosition, obj.transform.position));
 							print ("distance: "+   distance_to_chuong_ngai_vat  +"+ speed" + speed);
-							StartCoroutine(GetSpeed(distance_to_chuong_ngai_vat));
-							m_Car.SetSpeed(speed,huong_z);
+//							if (flag_chuong_ngai_vat == false) {
+								StartCoroutine (GetSpeed (distance_to_chuong_ngai_vat,"barrier"));
+								m_Car.SetSpeed (speed, huong_z);
+//							}
 						}
 
 
-					} else {
-						timer.GetComponent<Text> ().text = " ";
-					}
+					} 
+//					else {
+//						timer.GetComponent<Text> ().text = " ";
+//					}
 					ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 					if (timeLeft < 0) {
 						GameObject cnt = GameObject.Find ("chuong_ngai_vat(Clone)");
@@ -113,7 +162,7 @@ namespace UnityStandardAssets.Vehicles.Car
 							flag_chuong_ngai_vat = true;
 							float distance_to_chuong_ngai_vat=(int)(Vector3.Distance (carPosition, obj.transform.position));
 
-							StartCoroutine(GetSpeed(distance_to_chuong_ngai_vat));
+							StartCoroutine(GetSpeed(distance_to_chuong_ngai_vat,"barrier"));
 							m_Car.SetSpeed(speed,huong_z);
 						}
 
@@ -155,10 +204,10 @@ namespace UnityStandardAssets.Vehicles.Car
 		}
 
 
-		IEnumerator GetSpeed(float distance)
+		IEnumerator GetSpeed(float distance,string type)
 		{
 //			print ("getspped");
-			String url = "http://127.0.0.1:3000/getSpeed/" + distance ;
+			String url = "http://127.0.0.1:3000/getSpeed/" + distance  ;
 //			print (url);
 			using (UnityWebRequest www = UnityWebRequest.Get(url))
 			{
@@ -187,6 +236,44 @@ namespace UnityStandardAssets.Vehicles.Car
 
 					speed= float.Parse(str);
 //					print ("speed" + speed);
+					//						Debug.Log (checkpoint [i]);
+					//					}
+				}
+			}
+		}
+
+		IEnumerator GetSpeedTraffic(float distance,string light, int time)
+		{
+			//			print ("getspped");
+			String url = "http://127.0.0.1:3000/getSpeedTraffic/" + distance + "/" + light +"/" + time  ;
+			//			print (url);
+			using (UnityWebRequest www = UnityWebRequest.Get(url))
+			{
+				yield return www.Send();
+
+				if (www.isNetworkError || www.isHttpError)
+				{
+					Debug.Log(www.error);
+				}
+				else
+				{
+					// Show results as text
+					//					Debug.Log(www.downloadHandler.text);
+
+					// Or retrieve results as binary data
+					byte[] results = www.downloadHandler.data;
+					//					print ("huong" + results[1]);
+					String str = System.Text.Encoding.Default.GetString(results);
+
+					str = str.Substring (2,str.Length-4);
+					//					print ("checkpoints: " + str);
+					//					String[] trace = str.Split(","[0]);
+					//					len = trace.Length;
+					//					for(int i= 0; i < trace.Length; i++){
+					//						print (trace [i]);
+
+					speed= float.Parse(str);
+					//					print ("speed" + speed);
 					//						Debug.Log (checkpoint [i]);
 					//					}
 				}
