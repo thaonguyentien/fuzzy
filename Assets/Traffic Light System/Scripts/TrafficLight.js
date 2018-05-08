@@ -39,7 +39,7 @@ Yellow.enabled = true;
 
 Green.enabled = false;
 // "WaitForSeconds" can be changed.
-yield WaitForSeconds(5);
+yield WaitForSeconds(4);
 
 Red.enabled = true;
 

@@ -11,6 +11,7 @@ namespace UnityStandardAssets.Vehicles.Car
 	public class CarUserControl : MonoBehaviour
 	{
 		bool flag_traffic=false;
+		bool flag_traffic2=false;
 		bool flag_getMap= true;
 		int flag_handle=0;
 		float speed;
@@ -45,7 +46,7 @@ namespace UnityStandardAssets.Vehicles.Car
 		string light_status;
 		int time_light;
 		Vector3 traffic = new Vector3 (5, 0, 100);
-
+		Vector3 traffic2 = new Vector3 (100, 0, 400);
 		private void Awake()
 		{
 			ShowOverView ();
@@ -74,7 +75,7 @@ namespace UnityStandardAssets.Vehicles.Car
 			} else {
 				light_status = "RED";
 				time_light = 10 -(int)Math.Ceiling(adj_time) + 25;
-				if (time_light == 1) {
+				if (time_light == 0) {
 					time = 0;
 				}
 			}
@@ -125,6 +126,24 @@ namespace UnityStandardAssets.Vehicles.Car
 						}
 						m_Car.SetSpeed (speed, huong_z);
 //						print("GetSpeedTraffic"+ speed);
+						//							}
+					}
+
+					if (flag_traffic2 == false  ) {
+
+						flag_handle++;
+					}
+					if ((flag_handle%10)==0 && flag_traffic2 == false && carPosition.x > 90 && carPosition.x <110 && carPosition.z > 300) {
+
+						flag_handle = 0;
+						float distance_to_traffic= (int)(Vector3.Distance (carPosition, traffic2));
+
+						StartCoroutine (GetSpeedTraffic (distance_to_traffic,light_status,time_light));
+						if (speed > 30) {
+							speed -= 20;
+						}
+						m_Car.SetSpeed (speed, huong_z);
+						//						print("GetSpeedTraffic"+ speed);
 						//							}
 					}
 
