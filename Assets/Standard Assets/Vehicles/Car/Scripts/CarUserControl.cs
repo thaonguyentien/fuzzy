@@ -13,11 +13,8 @@ namespace UnityStandardAssets.Vehicles.Car
 		bool[] col = new bool[20];
 		GameObject target,pre_target;
 		float angle;
-		GameObject a,b,c;
-		bool flag_traffic=false;
-		bool flag_traffic2=false;
+		int delay=0;
 		bool flag_getMap= true;
-		int flag_handle=0,flag_handle2=0;
 		float speed;
 		float h = 0;// am re phai, duong re trai
 		float v = 1;
@@ -26,12 +23,12 @@ namespace UnityStandardAssets.Vehicles.Car
 		int len=-1;
 		public Dropdown m_Dropdown;
 		bool flag_inter=false;
-		bool flag_chuong_ngai_vat=false;
+		bool has_chuong_ngai_vat=false;
 		Ray ray;
 		RaycastHit hit;
 		public GameObject chuong_ngai_vat;
 		public GameObject timer;
-		float timeLeft=10.0f;
+		float timeLeft=1.0f;
 		GameObject obj;
 		public Camera overview_camera;
 		public Camera main_camera;
@@ -55,15 +52,13 @@ namespace UnityStandardAssets.Vehicles.Car
 		{
 			ShowOverView ();
 			ShowMain ();
-//			a=GameObject.Find("A");
-//			b=GameObject.Find("B");
-//			c=GameObject.Find("C");
-//			Vector2 A = new Vector2 (a.transform.position.x, a.transform.position.z);
-//			Vector2 B = new Vector2 (b.transform.position.x, b.transform.position.z);
-//			Vector2 C = new Vector2 (c.transform.position.x, c.transform.position.z);
-//			print (Vector2.Angle (B - A, B - C));
-				
-			//			print (light.);
+			pre_target = GameObject.Find ("0");
+			target = GameObject.Find ("1");
+			Vector2 B = new Vector2 (pre_target.transform.position.x, pre_target.transform.position.z);
+			Vector2 A = new Vector2 (target.transform.position.x, target.transform.position.z);
+			Vector2 C = new Vector2 (pre_target.transform.position.x + 100, pre_target.transform.position.z);
+			angle=90 - Vector2.Angle (B - A, B - C);
+
 			m_Car = GetComponent<CarController>();
 
 			//			inters.Add (inter);
@@ -74,178 +69,75 @@ namespace UnityStandardAssets.Vehicles.Car
 
 		private void FixedUpdate()
 		{
-			
-			time += Time.deltaTime;
-			double adj_time = time;
-			if (adj_time <= 20) {
-				light_status = "GREEN";
-				time_light = 20 -(int)Math.Ceiling(adj_time);
-			} else if (adj_time <= 25) {
-				light_status = "YELLOW";
-				time_light =  5 - (int )Math.Ceiling(adj_time) + 20;
-			} else {
-				light_status = "RED";
-				time_light = 10 -(int)Math.Ceiling(adj_time) + 25;
-				if (time_light == 0) {
-					time = 0;
+			carPosition = m_Car.transform.position;
+			delay++;
+			if (m_Car.transform.eulerAngles.y > (angle +1 ) || 
+				m_Car.transform.eulerAngles.y < (angle -1)) {
+				m_Car.transform.eulerAngles = new Vector3 (m_Car.transform.eulerAngles.x, angle, m_Car.transform.eulerAngles.z);;
+			}
+
+			if (has_chuong_ngai_vat == true && delay > 5 ) {
+				timeLeft -= Time.deltaTime;
+				delay = 0;
+				timer.GetComponent<Text> ().text = " " + timeLeft.ToString ();
+				if (timeLeft < 0) {
+					GameObject cnt = GameObject.Find ("chuong_ngai_vat(Clone)");
+					print ("destroy");
+					Destroy (cnt);
+					timeLeft = 1.0f;
+					has_chuong_ngai_vat = false;
+				}
+
+				float distance_to_chuong_ngai_vat = (int)(Vector3.Distance (carPosition, obj.transform.position));
+				print ("delay 5 : " + distance_to_chuong_ngai_vat);
+				StartCoroutine (GetSpeed (distance_to_chuong_ngai_vat, "barrier"));
+				m_Car.SetSpeed (speed, huong_z);
+			}
+
+			if (has_chuong_ngai_vat == false) {
+				
+				ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+				if (timeLeft < 0) {
+					GameObject cnt = GameObject.Find ("chuong_ngai_vat(Clone)");
+					print ("destroy");
+					Destroy (cnt);
+					timeLeft = 1.0f;
+					m_Car.SetSpeed (50f,huong_z);
+					has_chuong_ngai_vat = false;
+				}
+				if (Physics.Raycast (ray, out hit)) {
+
+					if (Input.GetKey (KeyCode.Mouse0) && has_chuong_ngai_vat == false) {
+						obj = Instantiate (chuong_ngai_vat, new Vector3 (hit.point.x, hit.point.y, hit.point.z), Quaternion.identity) as GameObject;
+						has_chuong_ngai_vat = true;
+						float distance_to_chuong_ngai_vat = (int)(Vector3.Distance (carPosition, obj.transform.position));
+
+						StartCoroutine (GetSpeed (distance_to_chuong_ngai_vat, "barrier"));
+						m_Car.SetSpeed (speed, huong_z);
+						print ("set speed cho chuong ngai vat" + speed + " distance   " + distance_to_chuong_ngai_vat);
+					}
+
 				}
 			}
-			//			print ("timeL "+adj_time);
-			timer.GetComponent<Text> ().text = " " + time_light.ToString ();
-			if (m_Dropdown.value != 0) {
-				Destroy (m_Dropdown);
-				if (flag_getMap == true) {
-					StartCoroutine(GetMap(0,m_Dropdown.value));
-					flag_getMap = false;
-				}
 
-
-
-				if(len!=-1)	{
-					if (flag_inter == false) {
-						//					
-						//					inters = GameObject.FindGameObjectsWithTag ("inter");
-						//					index = inters.Length - 1;
-						//					flag_inter = true;
-						//					for (int i=0;i<inters.Length;++i) {
-						//						 = inters[i].transform.position;
-						//						print(inters[i].transform.position);
-						//					}
-						for(int i=0;i<len;i++){
-							//						print(checkpoints[i]);
-							String name = "Inter" + checkpoints[i];
-							GameObject point = GameObject.Find (name);
-							//						print ("point "+point.transform.position);
-							interPositions[i]=point.transform.position;
-							//						print (point.transform.position);
-							point.gameObject.tag = "inter";
-
-						}
-					}
-
-					if ((flag_handle%10)==0 && flag_traffic == false) {
-
-						flag_handle = 0;
-						float distance_to_traffic= (int)(Vector3.Distance (carPosition, traffic));
-
-						StartCoroutine (GetSpeedTraffic (distance_to_traffic-2,light_status,time_light));
-						if (speed > 30) {
-							speed -= 20;
-						}
-						m_Car.SetSpeed (speed, huong_z);
-						//						print("GetSpeedTraffic"+ speed);
-						//							}
-					}
-					if (flag_traffic == false) {
-
-						flag_handle++;
-					}
-
-					if (flag_traffic2 == false  ) {
-
-						flag_handle2++;
-					}
-					if ((flag_handle2%10)==0 && flag_traffic2 == false && carPosition.x > 90 && carPosition.x <110 && carPosition.z > 300) {
-
-						flag_handle2 = 0;
-						float distance_to_traffic= (int)(Vector3.Distance (carPosition, traffic2));
-
-						StartCoroutine (GetSpeedTraffic (distance_to_traffic,light_status,time_light));
-						if (speed > 30) {
-							speed -= 20;
-						}
-						m_Car.SetSpeed (speed, huong_z);
-						//						print("GetSpeedTraffic"+ speed);
-						//							}
-					}
-
-					if (isTurns[0]) {
-						flag_traffic = true;
-					}
-
-					if (flag_chuong_ngai_vat == true) {
-						flag_handle++;
-						timeLeft -= Time.deltaTime;
-						timer.GetComponent<Text> ().text = " " + timeLeft.ToString ();
-						//						print ("getsppeed");
-						//						print((timeLeft * 10) % 2);
-						if ((flag_handle%10)==0) {
-							flag_handle = 0;
-							float distance_to_chuong_ngai_vat=(int)(Vector3.Distance (carPosition, obj.transform.position));
-							print ("distance: "+   distance_to_chuong_ngai_vat  +"+ speed" + speed);
-							//							if (flag_chuong_ngai_vat == false) {
-							StartCoroutine (GetSpeed (distance_to_chuong_ngai_vat,"barrier"));
-							m_Car.SetSpeed (speed, huong_z);
-							//							}
-						}
-
-
-					} 
-					//					else {
-					//						timer.GetComponent<Text> ().text = " ";
-					//					}
-					ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-					if (timeLeft < 0) {
-						GameObject cnt = GameObject.Find ("chuong_ngai_vat(Clone)");
-						print ("destroy");
-						Destroy (cnt);
-						timeLeft = 10.0f;
-						flag_chuong_ngai_vat = false;
-					}
-					if (Physics.Raycast (ray, out hit)) {
-
-						if (Input.GetKey (KeyCode.Mouse0) && flag_chuong_ngai_vat == false) {
-							obj = Instantiate (chuong_ngai_vat, new Vector3 (hit.point.x, hit.point.y, hit.point.z), Quaternion.identity) as GameObject;
-							flag_chuong_ngai_vat = true;
-							float distance_to_chuong_ngai_vat=(int)(Vector3.Distance (carPosition, obj.transform.position));
-
-							StartCoroutine(GetSpeed(distance_to_chuong_ngai_vat,"barrier"));
-							m_Car.SetSpeed(speed,huong_z);
-							print ("set speed cho chuong ngai vat" + speed + " distance   " + distance_to_chuong_ngai_vat);
-						}
-
-					}
-
-
-					//			float h = CrossPlatformInputManager.GetAxis("Horizontal");
-					//			float v = CrossPlatformInputManager.GetAxis("Vertical");
-					carPosition = car.transform.position;
-
-
-					dist = Vector3.Distance (carPosition, interPositions [index]);
-					//					print (index + " : " + interPositions [index]);
-					float stop_distance=Vector3.Distance (carPosition, interPositions [len-1]);
-					//					if (car.transform.position.x > interPositions[len-1].x &&  car.transform.position.y > interPositions[len-1].y 
-					//						&& car.transform.position.z > interPositions[len-1].z) {
-					//						Time.timeScale = 0;
-					//					}
-					if (stop_distance < 15) {
-						Time.timeScale = 0;
-
-					}
-					logicDirection (interPositions [index], interPositions [index + 1]);
-
-					dist_pre = dist;
-					// pass the input to the car!
-
-					//			print (h);
-					//			print (v);
-					#if !MOBILE_INPUT
-					float handbrake = CrossPlatformInputManager.GetAxis ("Jump");
-					m_Car.Move (h, v, v, handbrake);
-					#else
-					m_Car.Move(h, v, v, 0f);
-					#endif
-				}
-			}
+			// pass the input to the car!
+			float h = CrossPlatformInputManager.GetAxis("Horizontal");
+			//			float h=1.0f;
+			//            float v = CrossPlatformInputManager.GetAxis("Vertical");
+			float v=1.0f;
+			#if !MOBILE_INPUT
+			float handbrake = CrossPlatformInputManager.GetAxis("Jump");
+			m_Car.Move(h, v, v, handbrake);
+			#else
+			m_Car.Move(h, v, v, 0f);
+			#endif
 
 		}
-
-
+			
 		IEnumerator GetSpeed(float distance,string type)
 		{
 			//			print ("getspped");
-			String url = "http://127.0.0.1:3000/getSpeed/" + distance  ;
+			String url = "http://127.0.0.1:3000/getSpeed/" + distance +"/" + angle ;
 			//			print (url);
 			using (UnityWebRequest www = UnityWebRequest.Get(url))
 			{
@@ -335,7 +227,7 @@ namespace UnityStandardAssets.Vehicles.Car
 			string nextTarget = next.ToString ();
 			if (col [next] == false) {
 				col [next] = true;
-				print ("va cham");
+				print ("va cham" + other.transform.name);
 				Destroy (other.collider);
 				pre_target = target;
 
@@ -345,9 +237,9 @@ namespace UnityStandardAssets.Vehicles.Car
 				Vector2 A = new Vector2 (target.transform.position.x, target.transform.position.z);
 				Vector2 C = new Vector2 (pre_target.transform.position.x + 10, pre_target.transform.position.z);
 				angle = 90 - Vector2.Angle (B - A, B - C);
-				print (A);
-				print (B);
-				print (C);
+//				print (A);
+//				print (B);
+//				print (C);
 				print (angle);
 				target = GameObject.Find ((next.ToString ()));
 //				if (other.transform.name == "Node0") {

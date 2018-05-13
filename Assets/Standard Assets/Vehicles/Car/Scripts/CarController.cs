@@ -134,13 +134,13 @@ namespace UnityStandardAssets.Vehicles.Car
 			print ("setSpeed : " + speed + "huong_z " + huong_z); 
 			if (huong_z == true) {
 				if (speed >= MaxSpeed) {
-					m_Rigidbody.velocity = new Vector3 (0, 0, MaxSpeed-20);
+					m_Rigidbody.velocity = new Vector3 (0, 0, MaxSpeed);
 				} else {
 					m_Rigidbody.velocity = new Vector3 (0, 0, speed);
 				}
 			} else {
 				if (speed >= MaxSpeed) {
-					m_Rigidbody.velocity = new Vector3 (MaxSpeed-20, 0, 0);
+					m_Rigidbody.velocity = new Vector3 (MaxSpeed, 0, 0);
 				} else {
 					m_Rigidbody.velocity = new Vector3 (speed, 0, 0);
 				}
