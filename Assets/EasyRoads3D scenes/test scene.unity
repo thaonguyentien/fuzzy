@@ -243,6 +243,93 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &142597826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 490.02066, y: 1.2410367, z: 439.20624}
+  oldPosition: {x: 490.02066, y: 1.2410367, z: 439.20624}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.66116244, y: -0.0010012038, z: 0.7502421}
+  followTerrainContours: 0
+  startSplinePoint: 175
+  startDistance: 544.57306
+  startUVY: 0
+  totalDistance: 28.615234
+  totalDistanceString: 28.62 m
+  angleString: 1.96
+  gradeString: 1.09
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 488.38354, y: 1.2410367, z: 437.317}
+  - {x: 491.65778, y: 1.2410367, z: 441.0955}
+  - {x: 463.67786, y: 0.2620705, z: 433.9152}
+  - {x: 462.01654, y: 0.2620705, z: 438.63052}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: 0.33226386, y: 0, z: -0.9430704}
+  perpDirRotated: {x: 0.3323009, y: 0, z: -0.94317347}
 --- !u!1 &349456035
 GameObject:
   m_ObjectHideFlags: 1
@@ -341,6 +428,176 @@ Transform:
   m_Father: {fileID: 1745696671}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &439085817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 791.81177, y: 1.6742653, z: 298.31888}
+  oldPosition: {x: 791.81177, y: 1.6742653, z: 298.31888}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: 0.017936615, y: 0.040223394, z: 0.9990297}
+  followTerrainContours: 0
+  startSplinePoint: 39
+  startDistance: 153.37177
+  startUVY: 0
+  totalDistance: 39.949677
+  totalDistanceString: 39.95 m
+  angleString: 2.39
+  gradeString: 4.20
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 789.3472, y: 1.6742653, z: 297.9046}
+  - {x: 794.2763, y: 1.6742653, z: 298.73315}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.9858217, y: 0, z: -0.16571458}
+  perpDirRotated: {x: -0.9861646, y: 0, z: -0.16576914}
+--- !u!114 &467790155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 621.2984, y: 7.365546, z: 481.85312}
+  oldPosition: {x: 621.2984, y: 7.365546, z: 481.85312}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.41029644, y: -0.09814578, z: 0.90665555}
+  followTerrainContours: 0
+  startSplinePoint: 114
+  startDistance: 457.55615
+  startUVY: 0
+  totalDistance: 32.092896
+  totalDistanceString: 32.09 m
+  angleString: 4.46
+  gradeString: 7.92
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 619.56335, y: 7.365546, z: 480.09656}
+  - {x: 623.03345, y: 7.365546, z: 483.60968}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.69401646, y: 0, z: -0.70263046}
+  perpDirRotated: {x: -0.7027363, y: 0, z: -0.7114504}
 --- !u!1 &530056234
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +841,686 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &662355226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 700.8046, y: 7.5581436, z: 433.90598}
+  oldPosition: {x: 700.8046, y: 7.5581436, z: 433.90598}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.4338927, y: 0.009274292, z: 0.9009169}
+  followTerrainContours: 0
+  startSplinePoint: 89
+  startDistance: 356.1785
+  startUVY: 0
+  totalDistance: 34.57361
+  totalDistanceString: 34.57 m
+  angleString: 0.94
+  gradeString: 1.65
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 698.5375, y: 7.5581436, z: 432.86203}
+  - {x: 703.0718, y: 7.5581436, z: 434.94992}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.906864, y: 0, z: -0.4175742}
+  perpDirRotated: {x: -0.9083298, y: 0, z: -0.41825473}
+--- !u!114 &726769054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 607.1862, y: 2.3656492, z: 540.4803}
+  oldPosition: {x: 607.1862, y: 2.3656492, z: 540.4803}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.4574623, y: -0.080521174, z: 0.88557583}
+  followTerrainContours: 0
+  startSplinePoint: 129
+  startDistance: 518.9308
+  startUVY: 0
+  totalDistance: 39.03302
+  totalDistanceString: 39.03 m
+  angleString: 3.45
+  gradeString: 6.05
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 605.0888, y: 2.3656492, z: 539.1335}
+  - {x: 609.2836, y: 2.3656492, z: 541.8271}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.83896834, y: 0, z: -0.5387301}
+  perpDirRotated: {x: -0.8414584, y: 0, z: -0.5403219}
+--- !u!114 &787536013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 796.85364, y: 3.341325, z: 337.66217}
+  oldPosition: {x: 796.85364, y: 3.341325, z: 337.66217}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.039690625, y: -0.009158296, z: 0.99916995}
+  followTerrainContours: 0
+  startSplinePoint: 49
+  startDistance: 193.32144
+  startUVY: 0
+  totalDistance: 48.96382
+  totalDistanceString: 48.96 m
+  angleString: 0.90
+  gradeString: 1.58
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 794.35394, y: 3.341325, z: 337.62704}
+  - {x: 799.35333, y: 3.341325, z: 337.6973}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.99987173, y: 0, z: -0.014046801}
+  perpDirRotated: {x: -0.9999013, y: 0, z: -0.014050622}
+--- !u!114 &801898547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 444.17892, y: 3.1791852, z: 424.83978}
+  oldPosition: {x: 444.17892, y: 3.1791852, z: 424.83978}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.9640219, y: -0.10310308, z: -0.24501331}
+  followTerrainContours: 0
+  startSplinePoint: 8
+  startDistance: 22.199518
+  startUVY: 0
+  totalDistance: 26.87554
+  totalDistanceString: 26.88 m
+  angleString: 4.80
+  gradeString: 8.53
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 445.2466, y: 3.1791852, z: 422.57947}
+  - {x: 443.11124, y: 3.1791852, z: 427.1001}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: 0.4270702, y: 0, z: -0.90412414}
+  perpDirRotated: {x: 0.42711, y: 0, z: -0.9041996}
+--- !u!114 &808667215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 789.4783, y: 2.5747657, z: 385.71576}
+  oldPosition: {x: 789.4783, y: 2.5747657, z: 385.71576}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.69620734, y: 0.054781448, z: 0.7157475}
+  followTerrainContours: 0
+  startSplinePoint: 61
+  startDistance: 242.28526
+  startUVY: 0
+  totalDistance: 33.249924
+  totalDistanceString: 33.25 m
+  angleString: 4.03
+  gradeString: 7.27
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 787.30884, y: 2.5747657, z: 384.4747}
+  - {x: 791.6477, y: 2.5747657, z: 386.95682}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.86778176, y: 0, z: -0.496426}
+  perpDirRotated: {x: -0.8680049, y: 0, z: -0.49655575}
+--- !u!114 &856581879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 507.9824, y: 0.7598111, z: 398.9881}
+  oldPosition: {x: 507.9824, y: 0.7598111, z: 398.9881}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.56662005, y: -0.002915526, z: 0.823974}
+  followTerrainContours: 0
+  startSplinePoint: 161
+  startDistance: 500.23944
+  startUVY: 0
+  totalDistance: 44.33362
+  totalDistanceString: 44.33 m
+  angleString: 0.62
+  gradeString: 1.09
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 505.85922, y: 0.7598111, z: 397.6682}
+  - {x: 510.10556, y: 0.7598111, z: 400.30798}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.8492703, y: 0, z: -0.52795815}
+  perpDirRotated: {x: -0.84927136, y: 0, z: -0.5279565}
+--- !u!114 &868594447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 710.99713, y: 5.1080728, z: 409.97125}
+  oldPosition: {x: 710.99713, y: 5.1080728, z: 409.97125}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.42254665, y: 0.09944342, z: 0.90086913}
+  followTerrainContours: 0
+  startSplinePoint: 83
+  startDistance: 329.87485
+  startUVY: 0
+  totalDistance: 26.30365
+  totalDistanceString: 26.30 m
+  angleString: 5.35
+  gradeString: 9.42
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 709.0764, y: 5.1080728, z: 408.37494}
+  - {x: 712.91785, y: 5.1080728, z: 411.56757}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.7682884, y: 0, z: -0.6385312}
+  perpDirRotated: {x: -0.76906395, y: 0, z: -0.63917184}
+--- !u!114 &914512781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 8.8
+  rightSurrounding: 13
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 564.68353, y: 0.54800487, z: 291.83875}
+  oldPosition: {x: 564.68353, y: 0.54800487, z: 291.83875}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.6601343, y: 0.005224946, z: 0.75112945}
+  followTerrainContours: 0
+  startSplinePoint: 116
+  startDistance: 359.5728
+  startUVY: 0
+  totalDistance: 60.03647
+  totalDistanceString: 60.04 m
+  angleString: 0.68
+  gradeString: 1.19
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 562.49457, y: 0.54800487, z: 290.6311}
+  - {x: 566.8725, y: 0.54800487, z: 293.0464}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.87558323, y: 0, z: -0.48306015}
+  perpDirRotated: {x: -0.87558836, y: 0, z: -0.48305798}
 --- !u!1 &974142281
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,39 +1629,39 @@ MonoBehaviour:
   markers: []
   tmpMarkers: []
   markersExt:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1192996456}
+  - {fileID: 1862743989}
+  - {fileID: 1172078193}
+  - {fileID: 439085817}
+  - {fileID: 787536013}
+  - {fileID: 808667215}
+  - {fileID: 1121173346}
+  - {fileID: 1378670690}
+  - {fileID: 868594447}
+  - {fileID: 662355226}
+  - {fileID: 1564064455}
+  - {fileID: 2057532768}
+  - {fileID: 467790155}
+  - {fileID: 1691606367}
+  - {fileID: 726769054}
+  - {fileID: 1652581483}
   tmpMarkersExt:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1192996456}
+  - {fileID: 1862743989}
+  - {fileID: 1172078193}
+  - {fileID: 439085817}
+  - {fileID: 787536013}
+  - {fileID: 808667215}
+  - {fileID: 1121173346}
+  - {fileID: 1378670690}
+  - {fileID: 868594447}
+  - {fileID: 662355226}
+  - {fileID: 1564064455}
+  - {fileID: 2057532768}
+  - {fileID: 467790155}
+  - {fileID: 1691606367}
+  - {fileID: 726769054}
+  - {fileID: 1652581483}
   tValues:
   - 0
   - 0.14808036
@@ -912,7 +1849,7 @@ MonoBehaviour:
   roadShapeUVs2:
   - 0
   - 1
-  doConnectionTri: "\x01\x01"
+  doConnectionTri: 0101
   randomRotations:
   - 0
   - 0
@@ -1052,7 +1989,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  hardEdge: 
+  hardEdge: 0000
   roadShapeMaterialInts: 0000000000000000
   subMeshCount: 1
   roadShapeMaterialIntCounts: 02000000
@@ -3837,7 +4774,7 @@ MonoBehaviour:
   - {x: 589.6507, y: 0.5598305, z: 565.43494}
   - {x: 586.317, y: 0.32918844, z: 567.7783}
   - {x: 581.6757, y: -0.0032036398, z: 571.19525}
-  bridgeElement: 
+  bridgeElement: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   vecsBelowTerrain: []
   treeVecs:
   - {x: 753.23206, y: 7.349988, z: 184.11888}
@@ -4640,6 +5577,261 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &1090323614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 520.4313, y: 1.2554071, z: 331.67065}
+  oldPosition: {x: 520.4313, y: 1.2554071, z: 331.67065}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: 0.007779836, y: 0.0073955166, z: 0.99994236}
+  followTerrainContours: 0
+  startSplinePoint: 135
+  startDistance: 419.60928
+  startUVY: 0
+  totalDistance: 40.470154
+  totalDistanceString: 40.47 m
+  angleString: 0.05
+  gradeString: 0.09
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 518.14795, y: 1.2554071, z: 330.65292}
+  - {x: 522.7146, y: 1.2554071, z: 332.6884}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.9133275, y: 0, z: -0.4070982}
+  perpDirRotated: {x: -0.91337764, y: 0, z: -0.4071135}
+--- !u!114 &1121173346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 761.576, y: 4.910824, z: 401.67572}
+  oldPosition: {x: 761.576, y: 4.910824, z: 401.67572}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.9913044, y: 0.055542327, z: -0.11929211}
+  followTerrainContours: 0
+  startSplinePoint: 69
+  startDistance: 275.5352
+  startUVY: 0
+  totalDistance: 27.255371
+  totalDistanceString: 27.26 m
+  angleString: 2.27
+  gradeString: 4.00
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 761.1652, y: 4.910824, z: 399.21515}
+  - {x: 761.98676, y: 4.910824, z: 404.1363}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.16429783, y: 0, z: -0.98422843}
+  perpDirRotated: {x: -0.16466084, y: 0, z: -0.98635024}
+--- !u!114 &1172078193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 810.43854, y: 1.2088128, z: 247.9126}
+  oldPosition: {x: 810.43854, y: 1.2088128, z: 247.9126}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.2078086, y: -0.012901433, z: 0.9780844}
+  followTerrainContours: 0
+  startSplinePoint: 26
+  startDistance: 99.28572
+  startUVY: 0
+  totalDistance: 54.086044
+  totalDistanceString: 54.09 m
+  angleString: 0.49
+  gradeString: 0.87
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 807.94464, y: 1.2088128, z: 247.74863}
+  - {x: 812.93243, y: 1.2088128, z: 248.07657}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.99755985, y: 0, z: -0.06559092}
+  perpDirRotated: {x: -0.99784553, y: 0, z: -0.06560724}
 --- !u!43 &1179359495
 Mesh:
   m_ObjectHideFlags: 0
@@ -4770,6 +5962,686 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &1192996456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 755.8301, y: 7.349988, z: 177.1016}
+  oldPosition: {x: 755.8301, y: 7.349988, z: 177.1016}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: 0.9356398, y: -0.0676913, z: 0.3464043}
+  followTerrainContours: 0
+  startSplinePoint: 0
+  startDistance: 0
+  startUVY: 0
+  totalDistance: 43.823463
+  totalDistanceString: 43.82 m
+  angleString: 3.92
+  gradeString: 6.95
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 754.96405, y: 7.349988, z: 179.44069}
+  - {x: 756.6961, y: 7.349988, z: 174.7625}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.3464043, y: 0, z: 0.9356398}
+  perpDirRotated: {x: -0.34720716, y: 0, z: 0.9377884}
+--- !u!114 &1244052843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 462.8472, y: 0.2620705, z: 436.27286}
+  oldPosition: {x: 444.60797, y: 0, z: 421.22092}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.9291828, y: 0.07627676, z: -0.36166438}
+  followTerrainContours: 0
+  startSplinePoint: 184
+  startDistance: 573.1883
+  startUVY: 0
+  totalDistance: 22.199518
+  totalDistanceString: 22.20 m
+  angleString: 7.56
+  gradeString: 13.33
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 463.75137, y: 0.2620705, z: 433.9499}
+  - {x: 461.94302, y: 0.2620705, z: 438.59583}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: 0.36166438, y: 0, z: -0.9291828}
+  perpDirRotated: {x: 0.36272448, y: 0, z: -0.9318964}
+--- !u!114 &1378670690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 734.84705, y: 5.9892855, z: 398.05823}
+  oldPosition: {x: 734.84705, y: 5.9892855, z: 398.05823}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.95277303, y: -0.04153283, z: 0.30082977}
+  followTerrainContours: 0
+  startSplinePoint: 76
+  startDistance: 302.79056
+  startUVY: 0
+  totalDistance: 27.08429
+  totalDistanceString: 27.08 m
+  angleString: 1.86
+  gradeString: 3.31
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 734.4565, y: 5.9892855, z: 395.58896}
+  - {x: 735.2376, y: 5.9892855, z: 400.5275}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.15622576, y: 0, z: -0.98770386}
+  perpDirRotated: {x: -0.15622774, y: 0, z: -0.9877211}
+--- !u!114 &1389288521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 8.8
+  rightSurrounding: 13
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 477.14023, y: 3.6187532, z: 285.3825}
+  oldPosition: {x: 477.14023, y: 3.6187532, z: 285.3825}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: 0.615931, y: -0.0058557815, z: -0.7877784}
+  followTerrainContours: 0
+  startSplinePoint: 72
+  startDistance: 221.42662
+  startUVY: 0
+  totalDistance: 53.560318
+  totalDistanceString: 53.56 m
+  angleString: 1.86
+  gradeString: 3.28
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 479.25613, y: 3.6187532, z: 286.71335}
+  - {x: 475.02432, y: 3.6187532, z: 284.05167}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: 0.8463644, y: 0, z: 0.5323425}
+  perpDirRotated: {x: 0.8464846, y: 0, z: 0.53241336}
+--- !u!114 &1484660234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 6.6
+  leftIndentAlignment: 0
+  rightIndent: 12.7
+  rightIndentAlignment: 0
+  leftSurrounding: 9.2
+  rightSurrounding: 21.9
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 403.40768, y: 8.369289, z: 378.44702}
+  oldPosition: {x: 403.40768, y: 8.369289, z: 378.44702}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: 0.34577966, y: -0.10288693, z: -0.93265784}
+  followTerrainContours: 0
+  startSplinePoint: 30
+  startDistance: 91.04108
+  startUVY: 0
+  totalDistance: 45.18895
+  totalDistanceString: 45.19 m
+  angleString: 9.69
+  gradeString: 17.39
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 405.89395, y: 8.369289, z: 378.70483}
+  - {x: 400.92142, y: 8.369289, z: 378.1892}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: 0.9945041, y: 0, z: 0.1031305}
+  perpDirRotated: {x: 0.9946667, y: 0, z: 0.103141576}
+--- !u!114 &1528494669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 533.42584, y: 1.2923074, z: 368.54535}
+  oldPosition: {x: 533.42584, y: 1.2923074, z: 368.54535}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.46259415, y: -0.014017051, z: 0.88645935}
+  followTerrainContours: 0
+  startSplinePoint: 148
+  startDistance: 460.07944
+  startUVY: 0
+  totalDistance: 40.160004
+  totalDistanceString: 40.16 m
+  angleString: 0.76
+  gradeString: 1.34
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 530.95984, y: 1.2923074, z: 368.13507}
+  - {x: 535.89185, y: 1.2923074, z: 368.95563}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.98640674, y: 0, z: -0.16410556}
+  perpDirRotated: {x: -0.9864407, y: 0, z: -0.16411787}
+--- !u!114 &1563887382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 9.2
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 15.3
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 430.31433, y: 0.7743428, z: 344.0405}
+  oldPosition: {x: 430.31433, y: 0.7743428, z: 344.0405}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: 0.87769204, y: -0.065096095, z: -0.47478318}
+  followTerrainContours: 0
+  startSplinePoint: 45
+  startDistance: 136.23003
+  startUVY: 0
+  totalDistance: 41.76152
+  totalDistanceString: 41.76 m
+  angleString: 0.31
+  gradeString: 0.55
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 431.795, y: 0.7743428, z: 346.04102}
+  - {x: 428.83365, y: 0.7743428, z: 342.03998}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: 0.59227085, y: 0, z: 0.80020237}
+  perpDirRotated: {x: 0.59492046, y: 0, z: 0.80378455}
+--- !u!114 &1564064455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 682.96906, y: 8.125903, z: 463.26947}
+  oldPosition: {x: 682.96906, y: 8.125903, z: 463.26947}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.8318438, y: 0.15692572, z: 0.5323629}
+  followTerrainContours: 0
+  startSplinePoint: 97
+  startDistance: 390.7521
+  startUVY: 0
+  totalDistance: 35.465576
+  totalDistanceString: 35.47 m
+  angleString: 8.07
+  gradeString: 14.28
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 681.2627, y: 8.125903, z: 461.45367}
+  - {x: 684.6754, y: 8.125903, z: 465.08527}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.6825495, y: 0, z: -0.7263167}
+  perpDirRotated: {x: -0.684806, y: 0, z: -0.72872543}
 --- !u!1 &1646488617
 GameObject:
   m_ObjectHideFlags: 0
@@ -4810,6 +6682,176 @@ MonoBehaviour:
   m_Script: {fileID: 1419717442, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1652581483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 577.23193, y: 0.01679636, z: 565.1585}
+  oldPosition: {x: 577.23193, y: 0.01679636, z: 565.1585}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.8040238, y: -0.056912795, z: 0.5918671}
+  followTerrainContours: 0
+  startSplinePoint: 138
+  startDistance: 557.9638
+  startUVY: 0
+  totalDistance: 0
+  totalDistanceString: 0
+  angleString: 
+  gradeString: 
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 575.75226, y: 0.01679636, z: 563.14844}
+  - {x: 578.7116, y: 0.01679636, z: 567.1686}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.5918671, y: 0, z: -0.8040238}
+  perpDirRotated: {x: -0.5928278, y: 0, z: -0.80532926}
+--- !u!114 &1691606367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 612.4124, y: 4.8692894, z: 512.09924}
+  oldPosition: {x: 612.4124, y: 4.8692894, z: 512.09924}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.07869715, y: -0.085902505, z: 0.9931905}
+  followTerrainContours: 0
+  startSplinePoint: 122
+  startDistance: 489.64905
+  startUVY: 0
+  totalDistance: 29.281738
+  totalDistanceString: 29.28 m
+  angleString: 4.90
+  gradeString: 8.68
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 609.96423, y: 4.8692894, z: 511.6341}
+  - {x: 614.8606, y: 4.8692894, z: 512.5644}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.97927386, y: 0, z: -0.18605779}
+  perpDirRotated: {x: -0.9824249, y: 0, z: -0.18665853}
 --- !u!1 &1694726249
 GameObject:
   m_ObjectHideFlags: 0
@@ -5003,36 +7045,36 @@ MonoBehaviour:
   markers: []
   tmpMarkers: []
   markersExt:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1244052843}
+  - {fileID: 801898547}
+  - {fileID: 2088156632}
+  - {fileID: 1484660234}
+  - {fileID: 1563887382}
+  - {fileID: 1991556014}
+  - {fileID: 1389288521}
+  - {fileID: 2051014244}
+  - {fileID: 1987820148}
+  - {fileID: 914512781}
+  - {fileID: 1090323614}
+  - {fileID: 1528494669}
+  - {fileID: 856581879}
+  - {fileID: 142597826}
   tmpMarkersExt:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1244052843}
+  - {fileID: 801898547}
+  - {fileID: 2088156632}
+  - {fileID: 1484660234}
+  - {fileID: 1563887382}
+  - {fileID: 1991556014}
+  - {fileID: 1389288521}
+  - {fileID: 2051014244}
+  - {fileID: 1987820148}
+  - {fileID: 914512781}
+  - {fileID: 1090323614}
+  - {fileID: 1528494669}
+  - {fileID: 856581879}
+  - {fileID: 142597826}
+  - {fileID: 1244052843}
   tValues:
   - 0
   - 0.13584134
@@ -5266,7 +7308,7 @@ MonoBehaviour:
   roadShapeUVs2:
   - 0
   - 1
-  doConnectionTri: "\x01\x01"
+  doConnectionTri: 0101
   randomRotations:
   - 0
   - 0
@@ -5452,7 +7494,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  hardEdge: 
+  hardEdge: 0000
   roadShapeMaterialInts: 0000000000000000
   subMeshCount: 1
   roadShapeMaterialIntCounts: 02000000
@@ -9157,7 +11199,7 @@ MonoBehaviour:
   - {x: 466.55463, y: 0.24440031, z: 445.61017}
   - {x: 463.63995, y: 0.18926091, z: 444.5035}
   - {x: 460.35504, y: 0.24207051, z: 443.3464}
-  bridgeElement: 
+  bridgeElement: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   vecsBelowTerrain:
   - {x: 447.9591, y: -0.012582287, z: 339.2092}
   - {x: 446.61987, y: -0.012582287, z: 334.39188}
@@ -10116,6 +12158,91 @@ Transform:
   m_Father: {fileID: 2047813678}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1862743989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 794.73486, y: 4.354312, z: 195.68633}
+  oldPosition: {x: 794.73486, y: 4.354312, z: 195.68633}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: 0.5053638, y: -0.06895765, z: 0.8601467}
+  followTerrainContours: 0
+  startSplinePoint: 12
+  startDistance: 43.823463
+  startUVY: 0
+  totalDistance: 55.462257
+  totalDistanceString: 55.46 m
+  angleString: 3.25
+  gradeString: 5.77
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 792.75476, y: 4.354312, z: 197.20265}
+  - {x: 796.71497, y: 4.354312, z: 194.17}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.7920388, y: 0, z: 0.60652786}
+  perpDirRotated: {x: -0.7939454, y: 0, z: 0.6079891}
 --- !u!1 &1880899123
 GameObject:
   m_ObjectHideFlags: 1
@@ -10214,6 +12341,176 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1880899123}
   m_Mesh: {fileID: 1000362623}
+--- !u!114 &1987820148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 8.8
+  rightSurrounding: 13
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 562.6146, y: 1.379967, z: 255.74486}
+  oldPosition: {x: 562.6146, y: 1.379967, z: 255.74486}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: 0.5313648, y: -0.028163688, z: 0.8466748}
+  followTerrainContours: 0
+  startSplinePoint: 104
+  startDistance: 320.96265
+  startUVY: 0
+  totalDistance: 38.61017
+  totalDistanceString: 38.61 m
+  angleString: 1.23
+  gradeString: 2.30
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 560.9407, y: 1.379967, z: 257.6009}
+  - {x: 564.2886, y: 1.379967, z: 253.88882}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.66957515, y: 0, z: 0.7424142}
+  perpDirRotated: {x: -0.6697425, y: 0, z: 0.7425934}
+--- !u!114 &1991556014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 467.8839, y: 0.5460073, z: 327.0548}
+  oldPosition: {x: 467.8839, y: 0.5460073, z: 327.0548}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: 0.3619848, y: 0.06881871, z: -0.92964023}
+  followTerrainContours: 0
+  startSplinePoint: 58
+  startDistance: 177.99155
+  startUVY: 0
+  totalDistance: 43.435074
+  totalDistanceString: 43.44 m
+  angleString: 4.06
+  gradeString: 7.20
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 469.7735, y: 0.5460073, z: 328.6881}
+  - {x: 465.99432, y: 0.5460073, z: 325.4215}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: 0.75583196, y: 0, z: 0.6533156}
+  perpDirRotated: {x: 0.75654876, y: 0, z: 0.6539373}
 --- !u!1 &2047813676
 GameObject:
   m_ObjectHideFlags: 0
@@ -10277,10 +12574,10 @@ MonoBehaviour:
     planarUVs: 0
     outerIndent: 0
     roadShape: []
-    doConnectionTri: []
+    doConnectionTri: 
     roadShapeUVs: []
     roadShapeUVs2: []
-    hardEdge: []
+    hardEdge: 
     roadShapeVecsString: 
     sidewalks: 0
     sidewalkHeight: 0.2
@@ -10415,6 +12712,7 @@ MonoBehaviour:
   soTrees: 1
   doDetail: 1
   terrainRect:
+    serializedVersion: 2
     x: 0
     y: 0
     width: 1000
@@ -10563,11 +12861,7 @@ MonoBehaviour:
   prefabScripts: []
   globalGridActive: 0
   gridGUIActive: 0
-  globalGridColor:
-    r: 0.35
-    g: 0.5
-    b: 0.9
-    a: 0.9
+  globalGridColor: {r: 0.35, g: 0.5, b: 0.9, a: 0.9}
   globalGridSize: 10
   globalGridRotation: 0
   ggTL: {x: 0, y: 0, z: 0}
@@ -10603,3 +12897,258 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2051014244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 8.8
+  rightSurrounding: 13
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 518.1483, y: 1.8838425, z: 252.07439}
+  oldPosition: {x: 518.1483, y: 1.8838425, z: 252.07439}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: 0.97438556, y: -0.01802512, z: -0.22416039}
+  followTerrainContours: 0
+  startSplinePoint: 89
+  startDistance: 274.98694
+  startUVY: 0
+  totalDistance: 45.975708
+  totalDistanceString: 45.98 m
+  angleString: 0.63
+  gradeString: 1.13
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 518.98834, y: 1.8838425, z: 254.42809}
+  - {x: 517.3083, y: 1.8838425, z: 249.72069}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: 0.33601952, y: 0, z: 0.9414816}
+  perpDirRotated: {x: 0.3361306, y: 0, z: 0.9418153}
+--- !u!114 &2057532768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 5
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 651.3185, y: 13.097788, z: 477.77112}
+  oldPosition: {x: 651.3185, y: 13.097788, z: 477.77112}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.9891867, y: -0.12535232, z: 0.076133974}
+  followTerrainContours: 0
+  startSplinePoint: 106
+  startDistance: 426.21768
+  startUVY: 0
+  totalDistance: 31.33847
+  totalDistanceString: 31.34 m
+  angleString: 11
+  gradeString: 18.92
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 650.72534, y: 13.097788, z: 475.34357}
+  - {x: 651.9116, y: 13.097788, z: 480.19867}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: -0.23725604, y: 0, z: -0.97102654}
+  perpDirRotated: {x: -0.23735426, y: 0, z: -0.9714232}
+--- !u!114 &2088156632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1475867795, guid: f56d46228aee4734f9114056c53bb57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeSplineNode: 1
+  leftIndent: 5
+  leftIndentAlignment: 0
+  rightIndent: 5
+  rightIndentAlignment: 0
+  leftSurrounding: 5
+  rightSurrounding: 15.6
+  bridgeObject: 0
+  bridgeStartLevelDistance: 0
+  bridgeEndLevelDistance: 0
+  rotation: 0
+  position: {x: 419.6998, y: 0.9372841, z: 415.28122}
+  oldPosition: {x: 419.6998, y: 0.9372841, z: 415.28122}
+  positionTmp: {x: 0, y: 0, z: 0}
+  controlType: 0
+  controlTypeTmp: 0
+  rotations: 0
+  circularRadius: 1
+  circularAngle: 90
+  circularSegments: 10
+  splineStrength: 0.5
+  direction: {x: -0.5995193, y: 0.16991399, z: -0.78211623}
+  followTerrainContours: 0
+  startSplinePoint: 17
+  startDistance: 49.075058
+  startUVY: 0
+  totalDistance: 41.96602
+  totalDistanceString: 41.97 m
+  angleString: 10
+  gradeString: 18.45
+  rotationCenter: 0.5
+  soData: []
+  controllerType: 0
+  randomYPosition: 0
+  randomMinYPosition: 0
+  randomMaxYPosition: 0
+  minRandomYPositionDistance: 0
+  maxRandomYPositionDistance: 0
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 0
+  maxRandomRotationDistance: 0
+  prevLeftIndent: 0
+  prevRightIndent: 0
+  prevLeftSurrounding: 0
+  prevRightSurrounding: 0
+  prevControlType: 0
+  attachExit: 0
+  exitType: 0
+  exitGeometryType: 0
+  startExitInt: 0
+  endExitInt: 0
+  startExitOffset: 0
+  extrusionDistance: 10
+  extrusionType: 0
+  fixedDistance: 10
+  connectionAngle: 10
+  connectionRadius: 5
+  exitMaterial: {fileID: 0}
+  connectionMaterial: {fileID: 0}
+  exitRoadType: 0
+  connectionRoadType: 0
+  exitInnerVertices: []
+  customColor: {r: 1, g: 0, b: 0, a: 1}
+  roadShape:
+  - {x: 2.5, y: 0}
+  - {x: -2.5, y: 0}
+  roadShapeVecsGlobal:
+  - {x: 421.54852, y: 0.9372841, z: 413.615}
+  - {x: 417.85107, y: 0.9372841, z: 416.94745}
+  roadShapeDistanceMin: 0
+  roadShapeDistanceMax: 1
+  perpDir: {x: 0.73949075, y: 0, z: -0.6664949}
+  perpDirRotated: {x: 0.74281895, y: 0, z: -0.6694923}

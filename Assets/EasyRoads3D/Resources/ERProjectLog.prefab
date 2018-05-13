@@ -55,10 +55,10 @@ MonoBehaviour:
     planarUVs: 0
     outerIndent: 0
     roadShape: []
-    doConnectionTri: []
+    doConnectionTri: 
     roadShapeUVs: []
     roadShapeUVs2: []
-    hardEdge: []
+    hardEdge: 
     roadShapeVecsString: 
     sidewalks: 0
     sidewalkHeight: 0.2

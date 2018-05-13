@@ -121,7 +121,7 @@ MonoBehaviour:
   headerTexture: {fileID: 2800000, guid: 16ef664a0f7023c4a94fa58f50bf2899, type: 3}
   roadObjectsParent: {fileID: 400000}
   connectionObjectsParent: {fileID: 400002}
-  OCDQQODQCQ: {fileID: 0}
+  OOOOCODDCC: {fileID: 0}
   roadTypes:
   - roadTypeName: Default Road
     id: 1
@@ -135,10 +135,10 @@ MonoBehaviour:
     planarUVs: 0
     outerIndent: 0
     roadShape: []
-    doConnectionTri: []
+    doConnectionTri: 
     roadShapeUVs: []
     roadShapeUVs2: []
-    hardEdge: []
+    hardEdge: 
     roadShapeVecsString: 
     sidewalks: 0
     sidewalkHeight: 0.2
@@ -272,6 +272,7 @@ MonoBehaviour:
   soTrees: 1
   doDetail: 1
   terrainRect:
+    serializedVersion: 2
     x: 0
     y: 0
     width: 0
@@ -328,7 +329,7 @@ MonoBehaviour:
   hideSurfaces: 0
   useLightProbes: 0
   hideLockedObjects: 0
-  ODQDCQDCOD: 0
+  OODDDQDDDQ: 0
   isInBuildMode: 0
   progressFlag: 0
   progressTerrain: 1
@@ -372,7 +373,7 @@ MonoBehaviour:
   soSplatmapObjects: []
   buildSOinEditMode: 1
   tangentsInEditMode: 0
-  ODDDODOCQD: 1
+  ODQCOQOQQO: 1
   importSideObjectsAlert: 1
   importRoadPresetsAlert: 0
   importCrossingPresetsAlert: 0
@@ -402,13 +403,13 @@ MonoBehaviour:
   hideSurfaceHandles: 0
   dirtyBool: 0
   dirtyOnSceneBool: 0
-  OCDQQODQCQScript: {fileID: 0}
-  OQQOOQDCDOCrossingsScript: {fileID: 0}
-  OQQOOQDCDOScript: {fileID: 0}
-  OCDQQODQCQElement: -1
-  OCODCODOCD: -1
-  OQDDCODQOQ: {fileID: 0}
-  ODOOQDDQCC: -1
+  OOOOCODDCCScript: {fileID: 0}
+  OODOCDODDDCrossingsScript: {fileID: 0}
+  OODOCDODDDScript: {fileID: 0}
+  OOOOCODDCCElement: -1
+  OOOQDOOOQC: -1
+  ODQCOQCQCC: {fileID: 0}
+  OQQQQCCODO: -1
   selectedRoadSOMarker: -1
   selectedMarkerNode: -1
   selectedMarkerNodes: 
@@ -420,11 +421,7 @@ MonoBehaviour:
   prefabScripts: []
   globalGridActive: 0
   gridGUIActive: 0
-  globalGridColor:
-    r: 0.35
-    g: 0.5
-    b: 0.9
-    a: 0.9
+  globalGridColor: {r: 0.35, g: 0.5, b: 0.9, a: 0.9}
   globalGridSize: 10
   globalGridRotation: 0
   ggTL: {x: 0, y: 0, z: 0}

@@ -42,13 +42,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseScript: {fileID: 0}
   roadName: 
+  locked: 0
+  roadType: 0
+  isCustomRoadSet: 0
+  isCustomRoad: 0
   markers: []
   tmpMarkers: []
+  markersExt: []
+  tmpMarkersExt: []
+  tValues: []
   roadWidth: 5
   faceDistance: 2
+  angleTreshold: 45
   closedTrack: 0
   minNodeDistance: 5
   nodeWithinRange: -1
+  uvTiling: 1
+  planarUVs: 0
+  flipNormals: 0
+  randomnessFlag: 0
+  randomnessMarkerFlag: 0
+  randomYPosition: 0
+  randomMinYPosition: -0.02
+  randomMaxYPosition: 0.02
+  minRandomYPositionDistance: 15
+  maxRandomYPositionDistance: 35
+  randomMinRotation: 0
+  randomMaxRotation: 0
+  minRandomRotationDistance: 15
+  maxRandomRotationDistance: 35
   vertsStats: 0
   trisStats: 0
   indent: 2
@@ -56,11 +78,22 @@ MonoBehaviour:
   followTerrainContours: 0
   terrainContoursOffset: 5
   roadShape: []
+  roadShapeIntsStart: 
+  roadShapeIntsEnd: 
+  roadShapeIntsStartFull: 
+  roadShapeIntsEndFull: 
   roadShapeString: 
   roadShapeReversedString: 
+  roadShapeMatchCount: 0
   geoReversed: -1
+  roadShapeCols: 0
+  subSegments: 1
   nodeDistance: []
   roadShapeUVs: []
+  roadShapeUVs2: []
+  doConnectionTri: 
+  randomRotations: []
+  hardEdge: 
   roadShapeMaterialInts: 
   subMeshCount: 1
   roadShapeMaterialIntCounts: 
@@ -72,9 +105,21 @@ MonoBehaviour:
   soSplinePoints: []
   soSplinePointsLeft: []
   soSplinePointsRight: []
+  ODCOODCCDD: []
+  OCCODCOOOQ: []
   meshVecs: []
   meshUVs: []
+  meshUVs2: []
   surfaceMeshVecs: []
+  leftIndentVecs: []
+  rightIndentVecs: []
+  middleIndentVecs: []
+  leftSurroundingVecs: []
+  rightSurroundingVecs: []
+  leftIndentVecsSV: []
+  rightIndentVecsSV: []
+  bridgeElement: 
+  vecsBelowTerrain: []
   treeVecs: []
   detailVecs: []
   vegetationTris: 
@@ -85,8 +130,11 @@ MonoBehaviour:
   endPrefabScript: {fileID: 0}
   startConnectionSegment: 0
   endConnectionSegment: 0
+  tCrossingConnected: 0
   roadMaterial: {fileID: 0}
   roadMaterials: []
+  roadPhysicsMaterial: {fileID: 0}
+  roadPhysicsMaterials: []
   startDir: {x: 0, y: 0, z: 0}
   endDir: {x: 0, y: 0, z: 0}
   startAngle: 0
@@ -98,18 +146,38 @@ MonoBehaviour:
   p2: {x: 0, y: 0, z: 0}
   p3: {x: 0, y: 0, z: 0}
   p4: {x: 0, y: 0, z: 0}
+  p5: {x: 0, y: 0, z: 0}
+  p6: {x: 0, y: 0, z: 0}
+  p7: {x: 0, y: 0, z: 0}
+  cp1: {x: 0, y: 0, z: 0}
+  cp2: {x: 0, y: 0, z: 0}
+  cp3: {x: 0, y: 0, z: 0}
+  cp4: {x: 0, y: 0, z: 0}
+  cp5: {x: 0, y: 0, z: 0}
+  cp6: {x: 0, y: 0, z: 0}
+  cp7: {x: 0, y: 0, z: 0}
+  cp8: {x: 0, y: 0, z: 0}
+  cp9: {x: 0, y: 0, z: 0}
+  cpcenter: {x: 0, y: 0, z: 0}
+  p1Circle: {x: 0, y: 0, z: 0}
+  p2Circle: {x: 0, y: 0, z: 0}
+  cpradius: 0
+  cpangle: 0
+  dp1: {x: 0, y: 0, z: 0}
+  dp2: {x: 0, y: 0, z: 0}
+  dp3: {x: 0, y: 0, z: 0}
+  dp4: {x: 0, y: 0, z: 0}
   segPoints: []
   testPoints: []
   testPoints2: []
-  ODCDDOCOQO: {x: 0, y: 0, z: 0}
-  OODOOCCCDD: {x: 0, y: 0, z: 0}
+  OQDQQCQDQD: {x: 0, y: 0, z: 0}
+  OOQQCDQDQC: {x: 0, y: 0, z: 0}
   endLeft: {x: 0, y: 0, z: 0}
   endRight: {x: 0, y: 0, z: 0}
   testmesh: {fileID: 0}
   surfaceMesh: {fileID: 0}
   sv1: {x: 0, y: 0, z: 0}
   sv2: {x: 0, y: 0, z: 0}
-  criticicalVecs: []
   prefabIndentLeft: {x: 0, y: 0, z: 0}
   prefabIndentRight: {x: 0, y: 0, z: 0}
   roadIndent1: {x: 0, y: 0, z: 0}
@@ -122,16 +190,38 @@ MonoBehaviour:
   markerDistances: []
   osmRoadType: 
   soData: []
+  soDataExt: []
   sideObjectNames: []
   selectedSO: 0
   rebuildSos: 0
   sosCleared: 0
   isSideObject: 0
+  startOffsetActiveMarker: -1
+  endOffsetActiveMarker: -1
   leftToCenterPerc: 0
+  splatMapActive: 0
+  splatIndex: 0
+  expandLevel: 0
+  smoothLevel: 1
+  splatOpacity: 1
   layer: 0
+  tag: 
+  castShadow: 0
+  fadeInFlag: 0
+  fadeInDistance: 0
+  fadeOutFlag: 0
+  fadeOutDistance: 0
   doSurroundingSurfaces: 0
+  terrainDeformation: 1
   snapToTerrain: 0
+  snapVertices: 0
+  snapOffset: 0.01
+  hasMeshCollider: 1
   isUpdated: 0
+  QDDDQODQQDQDQQD: 0
+  uv4Type: 0
+  detailDistance: 50
+  roadUpdate: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
