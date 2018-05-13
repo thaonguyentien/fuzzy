@@ -131,7 +131,7 @@ namespace UnityStandardAssets.Vehicles.Car
         }
 
 		public void SetSpeed(float speed,bool huong_z){
-			print ("setSpeed : " + speed + "huong_z " + huong_z); 
+//			print ("setSpeed : " + speed + "huong_z " + huong_z); 
 			if (huong_z == true) {
 				if (speed >= MaxSpeed) {
 					m_Rigidbody.velocity = new Vector3 (0, 0, MaxSpeed);
